@@ -2,6 +2,20 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"settings": {
+		"layout": {
+			"contentSize": "40rem",
+			"wideSize": "50rem",
+			"allowEditing": false
+		},
+		"spacing": {
+			"padding": true,
+			"spacingScale": {
+				"unit": "rem",
+				"increment": 0.75,
+				"operator": "*",
+				"steps": 9
+			}
+		},
 		"color": {
 			"customDuotone": false,
 			"customGradient": false,
@@ -111,6 +125,13 @@
 		}
 	},
 	"styles": {
+		"css": ".parchment {border-radius: 2rem }",
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--default)"
+		},
+		"color": {
+			"background": "var(--wp--preset--color--base-darker)"
+		},
 		"elements": {
 			"link": {
 				"color": {
