@@ -1,0 +1,4 @@
+.wp-block-separator {
+	color: var(--wp--preset--color--contrast-light);
+	border-top-width: 1px;
+}
