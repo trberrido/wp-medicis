@@ -1,10 +1,17 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		}
+	],
 	"settings": {
 		"layout": {
-			"contentSize": "40rem",
-			"wideSize": "50rem",
+			"contentSize": "41rem",
+			"wideSize": "70rem",
 			"allowEditing": false
 		},
 		"spacing": {
@@ -24,17 +31,17 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"color": "#FF0909",
+					"color": "#FF0A0A",
 					"name": "Primaire",
 					"slug": "primary"
 				},
 				{
-					"color": "#FBE1DC",
+					"color": "#F9E1DC",
 					"name": "Primaire léger",
 					"slug": "primary-light"
 				},
 				{
-					"color": "#000000",
+					"color": "#212020",
 					"name": "Texte courant",
 					"slug": "contrast"
 				},
@@ -49,12 +56,12 @@
 					"slug": "contrast-inverted"
 				},
 				{
-					"color": "#FBFCF6",
+					"color": "#FAFCF5",
 					"name": "Fond",
 					"slug": "base"
 				},
 				{
-					"color": "#E7DBCF",
+					"color": "#E6DBCE",
 					"name": "Fond sombre",
 					"slug": "base-darker"
 				}
@@ -99,7 +106,7 @@
 				},
 				{
 					"name": "Titre maximum (titre du site)",
-					"size": "4rem",
+					"size": "4.75rem",
 					"slug": "xxxl"
 				}
 			],
@@ -132,7 +139,20 @@
 		"color": {
 			"background": "var(--wp--preset--color--base-darker)"
 		},
+		"blocks": {
+			"core/paragraph": {
+				"css": "text-align: justify"
+			},
+			"core/site-title": {
+				"css": "text-align: center"
+			}
+		},
 		"elements": {
+			"heading": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--primary)"
