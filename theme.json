@@ -68,9 +68,16 @@
 			]
 		},
 		"typography": {
-			"customFontSize": false,
+			"writingMode": true,
+			"customFontSize": true,
+			"textAlign": true,
+			"lineHeight": true,
+			"letterSpacing": true,
+			"fontStyle": true,
+			"textTransform": true,
+			"textDecoration": true,
 			"defaultFontSizes": false,
-			"fontWeight": false,
+			"fontWeight": true,
 			"dropCap": false,
 			"fontSizes": [
 				{
@@ -123,7 +130,12 @@
 						{
 							"fontFamily": "Neutronic",
 							"fontWeight": "400",
-							"src": "file:./assets/fonts/Neutronic Narrow Light.otf"
+							"src": "file:./assets/fonts/Neutronic Regular.woff"
+						},
+						{
+							"fontFamily": "Neutronic",
+							"fontWeight": "600",
+							"src": "file:./assets/fonts/Neutronic Semibold.woff"
 						}
 					]
 				}
