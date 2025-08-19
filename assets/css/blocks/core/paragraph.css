@@ -1,0 +1,3 @@
+p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
+	text-align: justify;
+}

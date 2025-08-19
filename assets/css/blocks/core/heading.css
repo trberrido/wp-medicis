@@ -1,0 +1,4 @@
+p.has-lg-font-size:has(+ h2),
+h2+p.has-lg-font-size {
+	margin: 0
+}
