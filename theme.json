@@ -72,41 +72,40 @@
 			"defaultFontSizes": false,
 			"fontWeight": false,
 			"dropCap": false,
-			"letterSpacing": false,
 			"fontSizes": [
 				{
-					"name": "Titre, très petit",
+					"name": "Texte, petit (crédits)",
 					"size": ".5rem",
 					"slug": "xs"
 				},
 				{
-					"name": "Texte, petit",
+					"name": "Texte courant",
 					"size": ".75rem",
 					"slug": "sm"
 				},
 				{
-					"name": "Texte courant",
+					"name": "Texte mis en avant / Chapeau",
 					"size": "1rem",
 					"slug": "md"
 				},
 				{
-					"name": "Titre, petit",
-					"size": "1.25rem",
+					"name": "Titre S",
+					"size": "1.01rem",
 					"slug": "lg"
 				},
 				{
-					"name": "Titre, moyen",
+					"name": "Titre M",
 					"size": "1.5rem",
 					"slug": "xl"
 				},
 				{
-					"name": "Titre, grand",
-					"size": "2.5rem",
+					"name": "Titre, L",
+					"size": "2rem",
 					"slug": "xxl"
 				},
 				{
-					"name": "Titre maximum (titre du site)",
-					"size": "4.75rem",
+					"name": "Titre XL",
+					"size": "3rem",
 					"slug": "xxxl"
 				}
 			],
@@ -139,18 +138,15 @@
 		"color": {
 			"background": "var(--wp--preset--color--base-darker)"
 		},
-		"blocks": {
-			"core/paragraph": {
-				"css": "text-align: justify"
-			},
-			"core/site-title": {
-				"css": "text-align: center"
-			}
-		},
 		"elements": {
 			"heading": {
 				"typography": {
 					"fontWeight": "400"
+				},
+				"spacing": {
+					"margin": {
+						"top": "0", "right": "0", "bottom": "0", "left": "0"
+					}
 				}
 			},
 			"link": {
