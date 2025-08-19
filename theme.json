@@ -68,7 +68,6 @@
 			]
 		},
 		"typography": {
-			"customFontSize": false,
 			"defaultFontSizes": false,
 			"fontWeight": false,
 			"dropCap": false,
