@@ -1,0 +1,10 @@
+.wp-block-list {
+	list-style-type: '—';
+	padding-left: 2em!important;
+}
+
+.wp-block-list > li {
+	padding-left: 2em;
+	line-height: 1.28;
+	letter-spacing: 0.025em;
+}

@@ -1,0 +1,5 @@
+.wp-block-group.is-style-callout {
+	background-color: var(--wp--preset--color--primary-light);
+	font-size: .8em;
+	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--60);	
+}

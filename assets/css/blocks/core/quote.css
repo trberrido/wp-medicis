@@ -1,0 +1,10 @@
+.wp-block-quote {
+	margin: 0;
+}
+
+.wp-block-quote p {
+	font-size: var(--wp--preset--font-size--450);
+	font-style: italic;
+	line-height: 1.28;
+	letter-spacing: 0.013em;
+}

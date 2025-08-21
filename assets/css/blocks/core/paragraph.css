@@ -1,3 +1,121 @@
 p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 	text-align: justify;
 }
+
+
+/* Crédits */
+.has-050-font-size {
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--contrast);
+	letter-spacing: 0.125em;
+}
+
+/* Sous titre */
+.has-100-font-size {
+	text-align: center!important;
+	text-transform: uppercase;
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--contrast);
+	letter-spacing: 0.313em;
+}
+
+/* Annotation: Titre */
+.has-200-font-size {
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--contrast-light);
+	text-transform: uppercase;
+	letter-spacing: 0.188em;
+}
+
+/* Sur titre */
+.has-250-font-size {
+	text-align: center!important;
+	text-transform: uppercase;
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--contrast);
+	letter-spacing: 0.438em;
+}
+
+/* Date */
+.has-251-font-size {
+	text-align: center!important;
+	text-transform: uppercase;
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--contrast);
+	letter-spacing: 0.125em;
+}
+
+/* Titre page 3 */
+.has-300-font-size {
+	text-align: center!important;
+	text-transform: uppercase;
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--primary);
+	letter-spacing: 0.313em;
+}
+
+/* Annotations: Lien / Contenu */
+.has-400-font-size {
+	font-family: var(--wp--preset--font-family--highlight);
+	letter-spacing: 0.09em;
+}
+
+.has-400-font-size a { text-decoration: none }
+
+/* Texte courant */
+.has-450-font-size {
+	font-family: var(--wp--preset--font-family--default);
+	line-height: 1.28;
+	letter-spacing: 0.025em;
+}
+
+/* Titre page 2 */
+.has-475-font-size {
+	text-align: center!important;
+	text-transform: uppercase;
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--primary);
+	letter-spacing: 0.313em;
+}
+
+/* Titre page 1 */
+.has-476-font-size {
+	text-align: center!important;
+	text-transform: uppercase;
+	font-family: var(--wp--preset--font-family--highlight);
+	color: var(--wp--preset--color--contrast);
+	letter-spacing: 0.313em;
+}
+
+/* Chapeau */
+.has-600-font-size {
+	font-family: var(--wp--preset--font-family--default);
+	line-height: 1.25;
+}
+
+/* Titre Article 3 */
+.has-650-font-size {
+	text-align: center!important;
+	font-family: var(--wp--preset--font-family--default);
+	letter-spacing: 0.006em;
+}
+
+.has-650-font-size[style*="font-style:italic"],
+.has-650-font-size[style*="font-style: italic"] {
+	letter-spacing: 0.044em;
+}
+
+/* Titre Article 2 */
+.has-700-font-size {
+	text-align: center!important;
+	font-family: var(--wp--preset--font-family--default);
+	color: var(--wp--preset--color--primary);
+	letter-spacing: 0.031em;
+}
+
+/* Titre Article 1 */
+.has-750-font-size {
+	text-align: center!important;
+	font-family: var(--wp--preset--font-family--default);
+	letter-spacing: 0.038em;
+}
