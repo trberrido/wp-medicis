@@ -81,7 +81,12 @@
 			"dropCap": false,
 			"fontSizes": [
 				{
-					"name": "Titre: Page 1 ou 2",
+					"name": "Titre: Page 1",
+					"size": ".8701em",
+					"slug": "476"
+				},
+				{
+					"name": "Titre: Page 2",
 					"size": ".87em",
 					"slug": "475"
 				},
