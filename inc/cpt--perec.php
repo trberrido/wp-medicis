@@ -2,9 +2,9 @@
 
 /* Create a CPT à la Perec, with juries as categories */
 
-add_action( 'init', 'pm__register_cpt__perec' );
+add_action( 'init', 'pm__perec__register_cpt' );
 
-function pm__register_cpt__perec() {
+function pm__perec__register_cpt() {
 	$labels = array(
 		'name'					=> 'À la Perec',
 		'singular_name'			=> 'À la Perec',

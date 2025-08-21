@@ -2,9 +2,9 @@
 
 /* Create a CPT jury, with the option In memoriam */
 
-add_action( 'init', 'pm__register_cpt__jury' );
+add_action( 'init', 'pm__jury__register_cpt' );
 
-function pm__register_cpt__jury() {
+function pm__jury__register_cpt() {
 	$labels = array(
 		'name'					=> 'Jurés',
 		'singular_name'			=> 'Juré',

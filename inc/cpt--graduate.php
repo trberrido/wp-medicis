@@ -4,11 +4,12 @@
  - years (tag)
  - catagorie (cat)
  - editeur (tag)
+  - post meta: translator name
  */
 
-add_action( 'init', 'pm__register_cpt__graduate' );
+add_action( 'init', 'pm__graduate__register_cpt' );
 
-function pm__register_cpt__graduate() {
+function pm__graduate__register_cpt() {
 	$labels = array(
 		'name'					=> 'Lauréats',
 		'singular_name'			=> 'Lauréat',
@@ -32,7 +33,8 @@ function pm__register_cpt__graduate() {
 				'title',
 				'excerpt',
 				'editor',
-				'thumbnail'
+				'thumbnail',
+				'custom-fields'
 			),
 			'show_in_rest'      => true,
 			'public'            => true,
@@ -114,4 +116,5 @@ function pm__register_cpt__graduate() {
 			) );
 		}
 	}
+
 }
