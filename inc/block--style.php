@@ -1,6 +1,6 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
 
-//add_action( 'init', 'pm__register_blocks_styles' );
+add_action( 'init', 'pm__register_blocks_styles' );
 function pm__register_blocks_styles(): void {
 
 	/* [
@@ -11,8 +11,8 @@ function pm__register_blocks_styles(): void {
 	*/
 
 	$blocks = array(
-		'core/paragraph'	=> array(
-			'highlight'		=> 'Highlight'
+		'core/group'	=> array(
+			'callout'		=> 'Encart'
 		)
 	);
 
