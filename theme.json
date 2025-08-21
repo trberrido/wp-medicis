@@ -31,6 +31,11 @@
 			"defaultPalette": false,
 			"palette": [
 				{
+					"color": "#E50A0A",
+					"name": "Primaire foncé",
+					"slug": "primary-dark"
+				},
+				{
 					"color": "#FF0A0A",
 					"name": "Primaire",
 					"slug": "primary"
@@ -68,52 +73,77 @@
 			]
 		},
 		"typography": {
-			"writingMode": true,
-			"customFontSize": true,
-			"textAlign": true,
-			"lineHeight": true,
-			"letterSpacing": true,
 			"fontStyle": true,
-			"textTransform": true,
-			"textDecoration": true,
-			"defaultFontSizes": false,
-			"fontWeight": true,
+			"textTransform": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"textDecoration": false,
 			"dropCap": false,
 			"fontSizes": [
 				{
-					"name": "Texte, petit (crédits)",
-					"size": ".5rem",
-					"slug": "xs"
+					"name": "Titre: Page 1 ou 2",
+					"size": ".87em",
+					"slug": "475"
 				},
 				{
-					"name": "Texte courant",
-					"size": ".75rem",
-					"slug": "sm"
+					"name": "Titre: Page 3",
+					"size": ".72em",
+					"slug": "300"
 				},
 				{
-					"name": "Texte mis en avant / Chapeau",
-					"size": "1rem",
-					"slug": "md"
+					"name": "Sur titre",
+					"size": ".64em",
+					"slug": "250"
 				},
 				{
-					"name": "Titre S",
-					"size": "1.01rem",
-					"slug": "lg"
+					"name": "Date",
+					"size": ".6401em",
+					"slug": "251"
 				},
 				{
-					"name": "Titre M",
-					"size": "1.5rem",
-					"slug": "xl"
+					"name": "Sous titre",
+					"size": ".59em",
+					"slug": "100"
 				},
 				{
-					"name": "Titre, L",
-					"size": "2rem",
-					"slug": "xxl"
+					"name": "Titre: Article 1",
+					"size": "2.6em",
+					"slug": "750"
 				},
 				{
-					"name": "Titre XL",
-					"size": "3rem",
-					"slug": "xxxl"
+					"name": "Titre: Article 2",
+					"size": "2.3em",
+					"slug": "700"
+				},
+				{
+					"name": "Titre: Article 3",
+					"size": "1.7em",
+					"slug": "650"
+				},
+				{
+					"name": "Texte: Chapeau",
+					"size": "1.2em",
+					"slug": "600"
+				},
+				{
+					"name": "Texte: Courant",
+					"size": ".85em",
+					"slug": "450"
+				},
+				{
+					"name": "Annotation: Titre",
+					"size": ".6em",
+					"slug": "200"
+				},
+				{
+					"name": "Annotation: Liens / contenu",
+					"size": ".8em",
+					"slug": "400"
+				},
+				{
+					"name": "Crédits",
+					"size": ".51em",
+					"slug": "050"
 				}
 			],
 			"fontFamilies": [
@@ -145,10 +175,14 @@
 	"styles": {
 		"css": ".parchment {border-radius: 2rem }",
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--default)"
+			"fontFamily": "var(--wp--preset--font-family--default)",
+			"fontSize": "1rem",
+			"fontStyle": "normal",
+			"fontWeight": "400"
 		},
 		"color": {
-			"background": "var(--wp--preset--color--base-darker)"
+			"background": "var(--wp--preset--color--base-darker)",
+			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
 			"heading": {
