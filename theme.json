@@ -203,6 +203,11 @@
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--primary-dark)"
+					}
 				}
 			}
 		}
