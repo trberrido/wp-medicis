@@ -63,42 +63,25 @@
     // Main plugin component
     const GraduateFieldsPlugin = () => {
 
-        const { postType, categoryObjects } = useSelect((select) => {
+        const postType = useSelect((select) => {
             const { getCurrentPostType, getEditedPostAttribute } = select('core/editor');
             const { getEntityRecords } = select('core');
-            const categoryIds = getEditedPostAttribute('graduate_prize') || [];
-            const categories = categoryIds.length > 0 
-                ? getEntityRecords('taxonomy', 'graduate_prize', { include: categoryIds }) || []
-                : [];
-            
-            return {
-                postType: getCurrentPostType(),
-                categoryObjects: categories
-            };
+            return getCurrentPostType();
         });
 
         if (postType !== 'graduate') {
             return null;
         }
 
-    /*
-        Show only if "Étranger" prize is selected. Featured removed.
-        const targetPrize = 'Étranger';
-        const hasTargetPrize = categoryObjects.some(cat => cat && cat.name === targetPrize);
-        if (!hasTargetPrize) {
-            return null;
-        }
-    */
-
         return createElement(PluginDocumentSettingPanel, {
-            name: 'graduate-fields-panel',
+            name: 'graduate-foreigner-fields-panel',
             title: 'Prix étranger',
-            className: 'graduate-fields-panel'
+            className: 'graduate-foreigner-fields-panel'
         }, createElement(GraduateFieldsPanel));
     };
 
     // Register the plugin
-    registerPlugin('graduate-fields', {
+    registerPlugin('graduate-foreigner-fields', {
         render: GraduateFieldsPlugin,
         icon: null
     });
