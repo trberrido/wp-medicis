@@ -50,6 +50,13 @@ function pm__perec__register_cpt() {
 		'hierarchical'      => true,
 		'show_in_rest'      => true,
 		'has_archive'       => false,
+		'show_in_menu'      => false,
+		'capabilities'      => array(
+			'manage_terms'  => 'do_not_allow',
+			'edit_terms'    => 'do_not_allow',
+			'delete_terms'  => 'edit_posts',
+			'assign_terms'  => 'edit_posts'
+		)
 	));
 
 	/* list all post of cpt jury
