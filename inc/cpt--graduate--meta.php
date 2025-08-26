@@ -21,6 +21,29 @@ function pm__graduate__register_metas() {
 		'sanitize_callback'		=> 'sanitize_text_field',
 		'auth_callback'			=> function() { return current_user_can('edit_posts'); }
 	) );
+	register_post_meta( 'graduate', 'pm__graduate__author_name', array(
+		'show_in_rest'			=> true,
+		'single'				=> true,
+		'label'					=> 'Nom de l\'auteur',
+		'default'				=> '',
+		'type'					=> 'string',
+		'sanitize_callback'		=> 'sanitize_text_field',
+		'auth_callback'			=> function() { return current_user_can('edit_posts'); }
+	) );
+		register_post_meta( 'graduate', 'pm__graduate__links', array(
+		'show_in_rest' => array(
+            'schema' => array(
+                'type' => 'string'
+            )
+        ),
+		'single'				=> true,
+		'label'					=> 'Liens',
+		'description' => 'Related links for the book stored as JSON',
+		'default'				=> '',
+		'type'					=> 'string',
+		'sanitize_callback'		=> 'sanitize_book_links_json',
+		'auth_callback'			=> function() { return current_user_can('edit_posts'); }
+	) );
 }
 
 // Enqueue the JavaScript files for admin UI
