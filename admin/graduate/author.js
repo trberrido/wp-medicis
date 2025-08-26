@@ -1,7 +1,7 @@
 (function() {
     const { registerPlugin } = wp.plugins;
     const { PluginDocumentSettingPanel } = wp.editPost;
-    const { TextControl } = wp.components;
+    const { TextControl, TextareaControl } = wp.components;
     const { useSelect, useDispatch } = wp.data;
     const { createElement } = wp.element;
 
@@ -22,6 +22,7 @@
 
         // Get current values
         const authorNameValue = meta.pm__graduate__author_name || '';
+        const linksValue = meta.pm__graduate__links || '';
 
         // Handle translator change
         const onAuthorNameChange = (value) => {
@@ -29,6 +30,16 @@
                 meta: {
                     ...meta,
                     pm__graduate__author_name: value
+                }
+            });
+        };
+
+        // Handle links change
+        const onLinksChange = (value) => {
+            editPost({
+                meta: {
+                    ...meta,
+                    pm__graduate__links: value
                 }
             });
         };
