@@ -47,13 +47,13 @@ function pm__graduate__register_metas() {
 }
 
 // Enqueue the JavaScript files for admin UI
-add_action('enqueue_block_editor_assets', 'enqueue_book_translator_script');
-function enqueue_book_translator_script() {
+add_action('enqueue_block_editor_assets', 'pm__graduate__enqueue_admin_scripts');
+function pm__graduate__enqueue_admin_scripts() {
     $screen = get_current_screen();
     if ($screen && $screen->post_type === 'graduate') {
         foreach ( glob( get_template_directory() . '/admin/graduate/*.js') as $script ){
             wp_enqueue_script(
-                basename($script, '.js'),
+                'grad-' . basename($script, '.js'),
                 get_template_directory_uri() . '/admin/graduate/' . basename($script),
                 array('wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data'),
                 filemtime( $script ),

@@ -28,7 +28,8 @@ function pm__jury__register_cpt() {
 				'title',
 				'excerpt',
 				'editor',
-				'thumbnail'
+				'thumbnail',
+				'custom-fields'
 			),
 			'show_in_rest'		=> true,
 			'public'			=> true,
