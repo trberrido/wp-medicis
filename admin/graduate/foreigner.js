@@ -81,11 +81,14 @@
             return null;
         }
 
+    /*
+        Show only if "Étranger" prize is selected. Featured removed.
         const targetPrize = 'Étranger';
         const hasTargetPrize = categoryObjects.some(cat => cat && cat.name === targetPrize);
         if (!hasTargetPrize) {
             return null;
         }
+    */
 
         return createElement(PluginDocumentSettingPanel, {
             name: 'graduate-fields-panel',
