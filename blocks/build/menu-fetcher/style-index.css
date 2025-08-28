@@ -57,6 +57,7 @@
   text-transform: lowercase;
   font-family: var(--wp--preset--font-family--default) !important;
   color: var(--wp--preset--color--contrast) !important;
+  min-width: 15rem;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item:hover > .sub-menu li.menu-item:hover a {
   color: var(--wp--preset--color--primary) !important;
