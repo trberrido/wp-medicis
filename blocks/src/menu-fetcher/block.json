@@ -13,6 +13,9 @@
 			"margin": true,
 			"padding": true
 		},
+		"typography": {
+			"fontSize": true
+		},
 		"layout": {
 			"allowOrientation": true,
 			"default": {

@@ -6,9 +6,24 @@
 			"area": "header",
 			"name": "header",
 			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
 		}
 	],
 	"settings": {
+		"custom": {
+			"border": {
+				"radius": {
+					"sm": ".5rem",
+					"md": "1rem",
+					"lg": "3rem",
+					"menu": "15rem"
+				}
+			}
+		},
 		"layout": {
 			"contentSize": "41rem",
 			"wideSize": "70rem",
@@ -69,6 +84,11 @@
 					"color": "#E6DBCE",
 					"name": "Fond sombre",
 					"slug": "base-darker"
+				},
+				{
+					"color": "#FBFCF6",
+					"name": "Fond clair",
+					"slug": "base-light"
 				}
 			]
 		},
@@ -178,7 +198,7 @@
 		}
 	},
 	"styles": {
-		"css": ".parchment {border-radius: 2rem }",
+		"css": "body { overflow-x: hidden }",
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--default)",
 			"fontSize": "1rem",
@@ -190,6 +210,15 @@
 			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
+			"button": {
+				"color": {
+					"background": "transparent",
+					"text": "var(--wp--preset--color--primary)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--highlight)"
+				}
+			},
 			"heading": {
 				"typography": {
 					"fontWeight": "400"

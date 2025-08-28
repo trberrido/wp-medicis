@@ -5,7 +5,7 @@
 	}
 
 	$args = array(
-		'menu'				=> $attributes['selectedMenu'],
+		'theme_location'	=> $attributes['selectedMenu'],
 		'container'			=> false,
 		'echo'				=> false,
 		'item_spacing'		=> 'discard'
@@ -17,6 +17,6 @@
 
 ?>
 
-<div <?php echo get_block_wrapper_attributes(); ?>>
+<div <?php echo get_block_wrapper_attributes( ['class' => 'menu__' . $attributes['selectedMenu'] ]); ?>>
 	<?php echo $menu; ?>
 </div>

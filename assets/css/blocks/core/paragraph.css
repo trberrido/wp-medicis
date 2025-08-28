@@ -80,12 +80,17 @@ p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 
 /* Titre page 1 */
 .has-476-font-size {
-	text-align: center!important;
 	text-transform: uppercase;
 	font-family: var(--wp--preset--font-family--highlight);
 	color: var(--wp--preset--color--contrast);
 	letter-spacing: 0.313em;
 }
+
+.has-476-font-size:not(.has-text-align-left) {
+	text-align: center!important;
+}
+
+
 
 /* Chapeau */
 .has-600-font-size {

@@ -8,7 +8,7 @@
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/menu-fetcher","version":"0.1.0","title":"Menu fetcher","category":"widgets","icon":"menu","description":"Display a classic menu","supports":{"html":false,"spacing":{"margin":true,"padding":true},"layout":{"allowOrientation":true,"default":{"orientation":"horizontal"},"allowSwitching":true}},"attributes":{"selectedMenu":{"type":"string","default":""}},"textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/menu-fetcher","version":"0.1.0","title":"Menu fetcher","category":"widgets","icon":"menu","description":"Display a classic menu","supports":{"html":false,"spacing":{"margin":true,"padding":true},"typography":{"fontSize":true},"layout":{"allowOrientation":true,"default":{"orientation":"horizontal"},"allowSwitching":true}},"attributes":{"selectedMenu":{"type":"string","default":""}},"textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

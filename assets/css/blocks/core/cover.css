@@ -1,0 +1,18 @@
+.wp-block-cover.--fixed {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 100vh;
+}
+
+.wp-block-cover.--fixed::after {
+	content: "";
+	background: #FF0000;
+	mix-blend-mode: multiply;
+	position: absolute;
+	width: 20rem;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+}
