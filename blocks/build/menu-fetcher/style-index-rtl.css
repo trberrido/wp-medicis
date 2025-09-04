@@ -6,6 +6,7 @@
   position: relative;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu {
+  position: relative;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -17,7 +18,6 @@
   color: var(--wp--preset--color--primary) !important;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item {
-  position: relative;
   padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item a {
@@ -42,6 +42,7 @@
   position: absolute;
   top: 100%;
   right: 0;
+  left: 0;
   background-color: var(--wp--preset--color--base);
   padding: var(--wp--preset--spacing--60) 0;
   border-radius: var(--wp--custom--border--radius--menu);
@@ -65,7 +66,7 @@
 
 .wp-block-pm-menu-fetcher.menu__secondary {
   position: fixed;
-  bottom: 0;
+  bottom: -0.75rem;
   margin: auto;
   width: 100%;
   font-family: var(--wp--preset--font-family--highlight);

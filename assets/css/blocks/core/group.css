@@ -5,11 +5,14 @@
 }
 
 .parchment {
-	border-radius: 2rem;
 	position: relative;
 }
 
-.parchment::before, .parchment::after, .parchment-vertical-line::after {
+.parchment-top::before,
+.parchment-top::after,
+.parchment-background::before,
+.parchment-background-bottom-container::before,
+.parchment-background-bottom-container::after {
 	mix-blend-mode: multiply;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -21,14 +24,14 @@
 	height: var(--parchment--height);
 }
 
-.parchment::after {
+.parchment-top::after {
 	--parchment--width: 14.75rem;
 	--parchment--height: 13rem;
 	right: calc(-1 * (var(--parchment--width) / 2));
 	top: 0;
 	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 235.6 207.59'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23e52923; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.7.9, SVG Export Plug-In . SVG Version: 1.2.0 Build 218) --%3E%3Cg%3E%3Cg id='Calque_1'%3E%3Cpath class='cls-1' d='M189.51,86.91c0,34.57-34.67,79.17-73.34,79.17s-70.03-28.03-70.03-62.6,31.35-62.6,70.03-62.6,73.34,11.45,73.34,46.02Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-.parchment::before {
+.parchment-top::before {
 	--parchment--width: 21rem;
 	--parchment--height: 19rem;
 	top: 5rem;
@@ -36,15 +39,65 @@
 	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 337.27 319.29'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23e52923; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.7.9, SVG Export Plug-In . SVG Version: 1.2.0 Build 218) --%3E%3Cg%3E%3Cg id='Calque_1'%3E%3Ccircle class='cls-1' cx='168.67' cy='159.33' r='97.45'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.parchment-vertical-line {
+.parchment-background {
 	position: relative;
-	width: 100%;
 }
 
-.parchment-vertical-line::after {
+.parchment-background::before {
 	--parchment--width: 89.5rem;
 	--parchment--height: 28rem;
-	left: -22rem;
+	left: -7.5rem;
 	top: -2rem;
+	z-index: 1;
 	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 1433.8 454.8'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23e52923; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.7.9, SVG Export Plug-In . SVG Version: 1.2.0 Build 218) --%3E%3Cg%3E%3Cg id='Calque_1'%3E%3Cpath class='cls-1' d='M1249.52,347.69c17.88-19.51,37.53-38.06,50.23-61.55,10.16-18.8,16.79-39.54,19.86-60.67,5.97-41.1-1.55-86.35-30.43-117.78-31.51-34.29-80.4-42.45-124.77-36.63-47.07,6.18-94.32,26.58-129.52,58.7-20.17,18.41-33.24,41.71-47.03,64.96-15.88,26.78-34.72,50.03-61.75,66.19-25.24,15.08-54.53,23.17-83.97,22.57-31.39-.65-61.59-10.62-89.81-23.77-50.57-23.57-96.21-56.55-149.27-74.79-47.87-16.45-98.5-24.59-148.9-27.82-54.02-3.46-108.47-1.11-162.02,6.72-49.91,7.29-99.59,19.33-146.18,38.93-10.26,4.31-20.34,9.02-30.21,14.17-1.71.89-.2,3.48,1.51,2.59,43.19-22.5,90.45-36.77,138.07-46.3,52.3-10.47,105.81-15.17,159.13-14.58s103.62,6.05,153.72,18.99c22.78,5.88,45.22,13.35,66.66,23.08,25.91,11.77,50.33,26.66,75.17,40.46,49.29,27.37,103.7,52.97,161.58,43.12,26.72-4.55,52.19-16.02,73.45-32.8,23.66-18.67,38.53-43.6,53.59-69.2,13.21-22.45,27.82-42.6,48.34-58.87,19.21-15.22,41.12-27.1,64.03-35.73,43.95-16.55,96.84-23.37,140.83-3.26,85.15,38.94,82.56,162.35,27.9,225.74-10.42,12.09-21.57,23.63-32.35,35.4-1.3,1.42.81,3.55,2.12,2.12h0Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.parchment-background-bottom-container { height: 52rem }
+.parchment-background-bottom-container::before {
+	--parchment--width: 22.125rem;
+	--parchment--height: 29rem;
+	z-index: 1;
+	top: -28rem;
+	right: -11rem;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 353.94 469.29'%3E%3Cdefs%3E%3Cstyle%3E .cls-1, .cls-2 %7B fill: %23e52923; %7D .cls-2 %7B mix-blend-mode: multiply; %7D .cls-3 %7B isolation: isolate; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.7.9, SVG Export Plug-In . SVG Version: 1.2.0 Build 218) --%3E%3Cg class='cls-3'%3E%3Cg id='Calque_1'%3E%3Cpath class='cls-1' d='M271.14,231.46c3.36-.81,6.75.65,9.15,2.99,2.72,2.64,3.98,6.28,4.57,9.95.62,3.88.51,7.9.36,11.82s-.46,7.49-.95,11.22c-1.98,15.09-6.79,29.83-13.97,43.24-3.58,6.68-7.74,13.06-12.48,18.99s-10.08,11.15-15.28,16.59c-10.75,11.26-21.27,22.72-32.3,33.71-9.06,9.02-18.49,18.35-29.5,25.01-1.06.64-2.14,1.25-3.24,1.82-1.72.89-.2,3.48,1.51,2.59,5.14-2.65,9.82-6.14,14.29-9.79,5.5-4.48,10.7-9.32,15.77-14.27,11.5-11.22,22.38-23.06,33.44-34.71,5.42-5.7,11.11-11.18,16.12-17.24s9.44-12.53,13.26-19.38c7.66-13.76,12.85-28.94,15.09-44.53,1.12-7.82,1.93-16.09,1.02-23.97-.85-7.33-4.51-15.25-12.43-16.98-1.75-.38-3.5-.36-5.24.06-1.88.45-1.08,3.35.8,2.89h0Z'/%3E%3Cpath class='cls-2' d='M291.17,153.59c0,62.23-37.42,121.38-99.65,121.38s-108.09-63.16-118.32-124.54c-10.38-62.27,51.94-91.33,114.17-91.33s103.8,32.27,103.8,94.49Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.parchment-background-bottom-container::after {
+	--parchment--width: 61rem;
+	--parchment--height: 52rem;
+	bottom: -12rem;
+  	left: -9.5rem;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 987.27 835.96'%3E%3Cdefs%3E%3Cstyle%3E .cls-1, .cls-2 %7B fill: %23e52923; %7D .cls-2 %7B mix-blend-mode: multiply; %7D .cls-3 %7B isolation: isolate; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.7.9, SVG Export Plug-In . SVG Version: 1.2.0 Build 218) --%3E%3Cg class='cls-3'%3E%3Cg id='Calque_1'%3E%3Cpath class='cls-1' d='M151.77,97.67c-18.39,10.15-37.43,21.01-50.63,37.79-11.89,15.13-18.9,36.14-12.51,55.02s23.6,30.47,39.86,39.89c18.2,10.54,37.56,19.01,57.53,25.56,40.31,13.23,82.89,18.61,125.19,19.24,21.47.32,42.94-.58,64.33-2.39s40.9-4.7,61.36-6.99c36.61-4.09,78.33-6.74,110.65,14.29,3.95,2.57,7.66,5.48,11.14,8.67,1.42,1.3,3.55-.81,2.12-2.12-27.99-25.63-67.47-28.27-103.55-25.73-19.4,1.37-38.62,4.31-57.93,6.51-21.04,2.4-42.17,4.03-63.33,4.6-41.97,1.12-84.31-1.88-125.14-12.06-20.23-5.04-40.04-11.85-58.93-20.71-9.34-4.39-18.47-9.25-27.28-14.64s-16.62-10.96-23.22-18.38-11.16-16.53-12.04-26.53,1.46-20.05,5.76-29.04c9.17-19.21,26.75-32.19,44.61-42.76,4.45-2.63,8.97-5.15,13.49-7.65,1.69-.93.18-3.52-1.51-2.59h0Z'/%3E%3Cpath class='cls-2' d='M903.93,471.12c0,136.75-82.24,266.75-218.99,266.75s-237.53-138.81-260.01-273.7c-22.81-136.85,114.14-200.71,250.89-200.71s228.12,70.91,228.12,207.66Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.parchment-content {}
+
+.parchment-background {
+	position: absolute!important;
+	left: 0;
+	right: 0;
+	height: 100%;
+}
+
+.parchment-top {
+	width: 100%;
+	height: 75%;
+	min-height: 45rem;
+	background-color: red;
+	border-radius: 5rem;
+}
+
+.parchment-bottom {
+	overflow: hidden;
+	top: -10rem;
+	height: 63rem;
+}
+
+.parchment-bottom__inner {
+	border-radius: 5rem;
+	transform: rotate(51.5deg);
+	aspect-ratio: 1/1.25;
+	transform-origin: top left;
+	top: -47rem;
+	left: 28.5rem;
 }
