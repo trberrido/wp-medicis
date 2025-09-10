@@ -30,7 +30,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_0___default()), {
-    block: "pm/year-filter"
+    block: "pm/perecs"
   });
 }
 
