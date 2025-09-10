@@ -4,6 +4,31 @@
 	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--60);	
 }
 
+.wp-block-group.is-style-ellipsis {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.wp-block-group.is-style-ellipsis :first-child {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	align-items: baseline;
+}
+
+.wp-block-group.is-style-ellipsis *:first-child::after {
+	content: '';
+	flex-grow: 1;
+	background-color: currentColor;
+	height: 1rem;
+	mask-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='2' fill='%23D9D9D9'/%3E%3C/svg%3E");
+	mask-size: 5px;
+	mask-repeat: space no-repeat;
+	mask-position: bottom;
+}
+
 .parchment {
 	position: relative;
 }
@@ -39,8 +64,16 @@
 	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 337.27 319.29'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23e52923; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.7.9, SVG Export Plug-In . SVG Version: 1.2.0 Build 218) --%3E%3Cg%3E%3Cg id='Calque_1'%3E%3Ccircle class='cls-1' cx='168.67' cy='159.33' r='97.45'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+.home .parchment-top {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: transparent;
+}
+
 .parchment-background {
 	position: relative;
+	z-index: 0;
 }
 
 .parchment-background::before {
@@ -81,7 +114,7 @@
 
 .parchment-top {
 	width: 100%;
-	height: 75%;
+	height: calc(100% - 20rem);
 	min-height: 45rem;
 	background-color: red;
 	border-radius: 5rem;

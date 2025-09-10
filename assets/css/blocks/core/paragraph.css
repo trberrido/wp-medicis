@@ -124,3 +124,5 @@ p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 	font-family: var(--wp--preset--font-family--default);
 	letter-spacing: 0.038em;
 }
+
+.pm-hidden { display: none }

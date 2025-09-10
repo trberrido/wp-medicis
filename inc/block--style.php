@@ -12,7 +12,8 @@ function pm__register_blocks_styles(): void {
 
 	$blocks = array(
 		'core/group'	=> array(
-			'callout'		=> 'Encart'
+			'callout'		=> 'Encart',
+			'ellipsis'		=> 'Points',
 		)
 	);
 

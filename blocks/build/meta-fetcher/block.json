@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "pm/meta-fetcher",
+  "version": "0.1.0",
+  "title": "Meta fetcher",
+  "category": "widgets",
+  "icon": "clipboard",
+  "description": "Pick and display a meta",
+  "supports": {
+    "typography": {
+      "fontSize": true
+    }
+  },
+  "attributes": {
+    "metaKey": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "pm",
+  "editorStyle": "file:./index.css",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

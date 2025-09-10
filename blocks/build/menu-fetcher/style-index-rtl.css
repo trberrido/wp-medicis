@@ -21,6 +21,7 @@
   padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item a {
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   color: var(--wp--preset--color--contrast-light);
   text-decoration: none;
@@ -51,6 +52,7 @@
   display: block;
   margin: 0;
   text-align: center;
+  font-size: 2.25rem;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item:hover > .sub-menu li.menu-item a {
   display: inline-block;
@@ -66,7 +68,7 @@
 
 .wp-block-pm-menu-fetcher.menu__secondary {
   position: fixed;
-  bottom: -0.75rem;
+  bottom: 0;
   margin: auto;
   width: 100%;
   font-family: var(--wp--preset--font-family--highlight);
@@ -88,6 +90,8 @@
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
 
 .wp-block-pm-menu-fetcher.menu__home-footer ul.menu {

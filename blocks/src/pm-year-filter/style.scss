@@ -18,7 +18,6 @@
 		
 			padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
 			a {
-				letter-spacing: 0.125rem;
 				text-transform: uppercase;
 				color: var(--wp--preset--color--contrast-light);
 				text-decoration: none;
@@ -50,7 +49,6 @@
 						display: block;
 						margin: 0;
 						text-align: center;
-						font-size: 2.25rem;
 						a {
 							display: inline-block;
 							padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--90);
@@ -71,7 +69,7 @@
 
 .wp-block-pm-menu-fetcher.menu__secondary {
 	position: fixed;
-	bottom: -0;
+	bottom: -.75rem;
 	margin: auto;
 	width: 100%;
 	font-family: var(--wp--preset--font-family--highlight);
@@ -91,8 +89,6 @@
 				text-decoration: none;
 				color: white;
 				text-transform: uppercase;
-				font-size: .8rem;
-				letter-spacing: .1rem;
 			}
 		}
 	}

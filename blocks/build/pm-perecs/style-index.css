@@ -1,0 +1,56 @@
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/pm-perecs/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+.wp-block-pm-perecs {
+  display: flex;
+  flex-direction: row;
+  gap: var(--wp--preset--spacing--60);
+}
+.wp-block-pm-perecs .perec-column__index {
+  width: 10rem;
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected {
+  background-color: var(--wp--preset--color--primary-light);
+  font-size: 1.1em;
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected .perec-index__author {
+  color: var(--wp--preset--color--primary);
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item {
+  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--20);
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item .perec-index__author.has-100-font-size {
+  text-align: left !important;
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item .perec-index__title {
+  margin: var(--wp--preset--spacing--10) 0;
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item .perec-index__title:hover {
+  cursor: pointer;
+  color: var(--wp--preset--color--primary);
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item .perec-index__title.pm-selected {
+  color: var(--wp--preset--color--primary);
+}
+.wp-block-pm-perecs .perec-column__index .perec-index__item:not(:last-child) {
+  border-bottom: 1px solid var(--wp--preset--color--base-darker);
+}
+.wp-block-pm-perecs .perec-column__content {
+  padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--60);
+  flex-grow: 1;
+  background-color: var(--wp--preset--color--primary-light);
+}
+.wp-block-pm-perecs .perec-column__content .perec-content__text p {
+  font-style: italic;
+}
+.wp-block-pm-perecs .pm-icon__plume {
+  background-image: url(../images/plume--mini.b437a623.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  aspect-ratio: 817/1209;
+  width: 4rem;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

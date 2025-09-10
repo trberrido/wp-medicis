@@ -92,7 +92,10 @@ function pm__graduate__register_cpt() {
 		),
 		'hierarchical'      => true,
 		'show_in_rest'      => true,
-		'has_archive'       => false,
+		'has_archive'       => true,
+		'rewrite'           => array(
+			'slug' => 'prix',
+		)
 	);
 	register_taxonomy( 'graduate_prize', array( 'graduate' ), $args_prize );
 	$terms_prize = array(
