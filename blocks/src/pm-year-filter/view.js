@@ -7,7 +7,7 @@ const updatePosts = (currentYear) => {
 	const { ref } = getElement();
 	const context = getContext();
 	ref.closest('.wp-site-blocks').querySelectorAll('.pm-post').forEach( ( post ) => {
-		const postYear = post.querySelector('.taxonomy-graduate_year a').innerText;
+		const postYear = post.querySelector('.taxonomy-graduate_year a')?.innerText;
 		if ( postYear === context.currentYear ){
 			post.classList.remove('pm-hidden');
 		} else {

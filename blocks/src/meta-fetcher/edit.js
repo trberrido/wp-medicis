@@ -14,7 +14,7 @@ export default function Edit({ attributes, setAttributes, context }) {
 
     const [meta, setMeta] = useEntityProp('postType', context.postType, 'meta', context.postId);
 	const metaKeys = meta ? Object.keys(meta).filter(key => key.startsWith('pm__')) : [];
-
+console.log(context, meta)
     const onChangeMetaKey = (newMetaKey) => {
         setAttributes({ metaKey: newMetaKey });
     };
@@ -45,7 +45,7 @@ export default function Edit({ attributes, setAttributes, context }) {
 							attributes={attributes}
 						/>
 					:
-						<p>Select a menu</p>
+						<p>Select a meta</p>
 				}
 			</div>
 		</div>

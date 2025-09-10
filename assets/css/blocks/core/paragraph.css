@@ -125,4 +125,5 @@ p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 	letter-spacing: 0.038em;
 }
 
+.has-text-align-center p { text-align: center }
 .pm-hidden { display: none }

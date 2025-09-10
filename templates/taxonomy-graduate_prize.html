@@ -23,13 +23,47 @@
 <!-- wp:group {"metadata":{"name":"Parchment content"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:template-part {"slug":"header","theme":"wp-medicis","area":"uncategorized","className":"parchment-vertical-line"} /-->
 
-<!-- wp:post-title {"level":1,"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"fontSize":"476"} /-->
+<!-- wp:term-description {"textAlign":"center","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"fontSize":"476"} /-->
 
-<!-- wp:image {"id":9784,"width":"72px","height":"auto","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide"><!-- wp:image {"id":9784,"width":"72px","height":"auto","sizeSlug":"full","linkDestination":"none","align":"center"} -->
 <figure class="wp-block-image aligncenter size-full is-resized"><img src="/wp-content/themes/wp-medicis/assets/images/chat--mini.webp" alt="" class="wp-image-9784" style="width:72px;height:auto"/></figure>
-<!-- /wp:image -->
+<!-- /wp:image --></div>
+<!-- /wp:group -->
 
-<!-- wp:post-content {"fontSize":"md"} /--></div>
+<!-- wp:query {"queryId":5,"query":{"perPage":100,"pages":0,"offset":0,"postType":"graduate","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:group {"className":"pm-post pm-hidden","layout":{"type":"constrained"}} -->
+<div class="wp-block-group pm-post pm-hidden"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top"} -->
+<div class="wp-block-column is-vertically-aligned-top"><!-- wp:post-featured-image {"aspectRatio":"3/4","width":"","height":"100%","align":"right"} /--></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"stretch","className":"info-column"} -->
+<div class="wp-block-column is-vertically-aligned-stretch info-column"><!-- wp:group {"className":"pm-info__top","layout":{"type":"constrained"}} -->
+<div class="wp-block-group pm-info__top"><!-- wp:post-terms {"term":"graduate_year","textAlign":"left","className":"pm-year-btn","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"750"} /-->
+
+<!-- wp:pm/year-filter {"className":"pm-hidden"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"300","fontFamily":"highlight"} -->
+<p class="has-text-align-left has-primary-color has-text-color has-link-color has-highlight-font-family has-300-font-size">Prix Medicis attribué à </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pm/meta-fetcher {"metaKey":"pm__graduate__author_name","fontSize":"600"} /-->
+
+<!-- wp:post-title {"textAlign":"left","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"fontSize":"600"} /-->
+
+<!-- wp:post-terms {"term":"graduate_publisher","className":"pm-publisher","style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"textColor":"contrast"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:post-content {"style":{"spacing":{"padding":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"fontSize":"450"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

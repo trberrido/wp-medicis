@@ -68,7 +68,7 @@ const updatePosts = currentYear => {
   } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
   const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
   ref.closest('.wp-site-blocks').querySelectorAll('.pm-post').forEach(post => {
-    const postYear = post.querySelector('.taxonomy-graduate_year a').innerText;
+    const postYear = post.querySelector('.taxonomy-graduate_year a')?.innerText;
     if (postYear === context.currentYear) {
       post.classList.remove('pm-hidden');
     } else {

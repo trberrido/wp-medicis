@@ -46,6 +46,7 @@ function Edit({
 }) {
   const [meta, setMeta] = (0,_wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__.useEntityProp)('postType', context.postType, 'meta', context.postId);
   const metaKeys = meta ? Object.keys(meta).filter(key => key.startsWith('pm__')) : [];
+  console.log(context, meta);
   const onChangeMetaKey = newMetaKey => {
     setAttributes({
       metaKey: newMetaKey
@@ -77,7 +78,7 @@ function Edit({
         block: "pm/meta-fetcher",
         attributes: attributes
       }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-        children: "Select a menu"
+        children: "Select a meta"
       })
     })]
   });

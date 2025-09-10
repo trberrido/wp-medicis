@@ -1,4 +1,4 @@
-import { ServerSideRender } from '@wordpress/components';
+import ServerSideRender from '@wordpress/server-side-render';
 
 export default function Edit() {
 

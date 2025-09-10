@@ -58,7 +58,10 @@ function pm__graduate__register_cpt() {
 		),
 		'hierarchical'      => false,
 		'show_in_rest'      => true,
-		'has_archive'       => false,
+		'has_archive'       => true,
+		'rewrite'           => array(
+			'slug' => 'annee',
+		)
 	);
 	register_taxonomy( 'graduate_year', array( 'graduate' ), $args_year );
 
@@ -120,4 +123,13 @@ function pm__graduate__register_cpt() {
 		}
 	}
 
+}
+
+add_action( 'pre_get_posts', 'pm__infinite_graduates' );
+function pm__infinite_graduates( $query ) {
+    if ( !is_admin() && $query->is_main_query() ) {
+        if ( is_tax( 'graduate_prize' ) ) {
+            $query->set( 'posts_per_page', -1 );
+        }
+    }
 }
