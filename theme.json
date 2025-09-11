@@ -1,49 +1,7 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 3,
-	"templateParts": [
-		{
-			"area": "header",
-			"name": "header",
-			"title": "Header"
-		},
-		{
-			"area": "footer",
-			"name": "footer",
-			"title": "Footer"
-		}
-	],
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"settings": {
 		"appearanceTools": true,
-		"custom": {
-			"border": {
-				"radius": {
-					"sm": ".5rem",
-					"md": "1rem",
-					"lg": "3rem",
-					"menu": "15rem"
-				}
-			}
-		},
-		"border": {
-			"radius": true
-		},
-		"layout": {
-			"contentSize": "41rem",
-			"wideSize": "70rem",
-			"allowEditing": false
-		},
-		"spacing": {
-			"margin": true,
-			"blockGap": true,
-			"padding": true,
-			"spacingScale": {
-				"unit": "rem",
-				"increment": 0.75,
-				"operator": "*",
-				"steps": 9
-			}
-		},
 		"color": {
 			"customDuotone": false,
 			"customGradient": false,
@@ -72,7 +30,7 @@
 					"slug": "contrast"
 				},
 				{
-					"color": "#595957",
+					"color": "#6b6b6b",
 					"name": "Texte léger",
 					"slug": "contrast-light"
 				},
@@ -98,15 +56,57 @@
 				}
 			]
 		},
+		"custom": {
+			"border": {
+				"radius": {
+					"lg": "3rem",
+					"md": "1rem",
+					"menu": "15rem",
+					"sm": ".5rem"
+				}
+			}
+		},
+		"layout": {
+			"allowEditing": false,
+			"contentSize": "41rem",
+			"wideSize": "55rem"
+		},
+		"spacing": {
+			"spacingScale": {
+				"increment": 0.75,
+				"operator": "*",
+				"steps": 9,
+				"unit": "rem"
+			},
+			"spacingSizes": []
+		},
 		"typography": {
-			"fontStyle": true,
-			"textTransform": true,
-			"fontWeight": false,
-			"letterSpacing": true,
-			"textDecoration": true,
-			"dropCap": true,
 			"customFontSize": true,
-			"textAlign": true,
+			"dropCap": true,
+			"fontFamilies": [
+				{
+					"fontFamily": "Georgia, serif",
+					"name": "Défaut",
+					"slug": "default"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Neutronic",
+							"fontWeight": "400",
+							"src": "file:./assets/fonts/Neutronic Regular.woff"
+						},
+						{
+							"fontFamily": "Neutronic",
+							"fontWeight": "600",
+							"src": "file:./assets/fonts/Neutronic Semibold.woff"
+						}
+					],
+					"fontFamily": "\"Neutronic\", sans-serif",
+					"name": "Décroché",
+					"slug": "highlight"
+				}
+			],
 			"fontSizes": [
 				{
 					"name": "Titre: Page 1",
@@ -179,44 +179,20 @@
 					"slug": "050"
 				}
 			],
-			"fontFamilies": [
-				{
-					"name": "Défaut",
-					"slug": "default",
-					"fontFamily": "Georgia, serif"
-				},
-				{
-					"name": "Décroché",
-					"slug": "highlight",
-					"fontFamily": "\"Neutronic\", sans-serif",
-					"fontFace": [
-						{
-							"fontFamily": "Neutronic",
-							"fontWeight": "400",
-							"src": "file:./assets/fonts/Neutronic Regular.woff"
-						},
-						{
-							"fontFamily": "Neutronic",
-							"fontWeight": "600",
-							"src": "file:./assets/fonts/Neutronic Semibold.woff"
-						}
-					]
-				}
-			]
+			"fontStyle": true,
+			"fontWeight": false,
+			"letterSpacing": true,
+			"textAlign": true,
+			"textDecoration": true,
+			"textTransform": true
 		}
 	},
 	"styles": {
-		"css": "body { overflow-x: hidden }",
-		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--default)",
-			"fontSize": "1rem",
-			"fontStyle": "normal",
-			"fontWeight": "400"
-		},
 		"color": {
 			"background": "var(--wp--preset--color--base-darker)",
 			"text": "var(--wp--preset--color--contrast)"
 		},
+		"css": "body { overflow-x: hidden }",
 		"elements": {
 			"button": {
 				"color": {
@@ -228,25 +204,47 @@
 				}
 			},
 			"heading": {
-				"typography": {
-					"fontWeight": "400"
-				},
 				"spacing": {
 					"margin": {
-						"top": "0", "right": "0", "bottom": "0", "left": "0"
+						"bottom": "0",
+						"left": "0",
+						"right": "0",
+						"top": "0"
 					}
+				},
+				"typography": {
+					"fontWeight": "400"
 				}
 			},
 			"link": {
-				"color": {
-					"text": "var(--wp--preset--color--primary)"
-				},
 				":hover": {
 					"color": {
 						"text": "var(--wp--preset--color--primary-dark)"
 					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--default)",
+			"fontSize": "1rem",
+			"fontStyle": "normal",
+			"fontWeight": "400"
 		}
-	}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
+		}
+	],
+	"version": 3
 }
