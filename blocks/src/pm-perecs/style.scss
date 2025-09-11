@@ -8,7 +8,7 @@
 		flex-shrink: 0;
 		.perec-index__item.pm-selected {
 			background-color: var(--wp--preset--color--primary-light);
-			font-size: .7em;
+			font-size: 1.1em;
 			.perec-index__author{
 				color: var(--wp--preset--color--primary);
 			}
@@ -36,8 +36,10 @@
 	.perec-column__content {
 		padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--60);
 		flex-grow: 1;
+		height: fit-content;	
 		background-color: var(--wp--preset--color--primary-light);
-		font-size: .7rem;
+		font-size: .8rem;
+		line-height: 1.6;
 		.perec-content__text p {
 			font-style: italic;
 		}

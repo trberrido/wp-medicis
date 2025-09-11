@@ -12,7 +12,7 @@
 }
 .wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected {
   background-color: var(--wp--preset--color--primary-light);
-  font-size: 0.7em;
+  font-size: 1.1em;
 }
 .wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected .perec-index__author {
   color: var(--wp--preset--color--primary);
@@ -39,8 +39,11 @@
 .wp-block-pm-perecs .perec-column__content {
   padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--60);
   flex-grow: 1;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: var(--wp--preset--color--primary-light);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 .wp-block-pm-perecs .perec-column__content .perec-content__text p {
   font-style: italic;
