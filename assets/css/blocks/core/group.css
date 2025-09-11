@@ -119,12 +119,14 @@
 	min-height: 50rem;
 	background-color: red;
 	border-radius: 5rem;
+	border-bottom-right-radius: 4rem;
 }
 
 .parchment-bottom {
 	overflow: hidden;
-	top: -10rem;
-	height: 63rem;
+	top: -14.3rem;
+	height: 50rem;
+	border-radius: 4rem;
 }
 
 .parchment-bottom__inner {
@@ -132,6 +134,7 @@
 	transform: rotate(51.5deg);
 	aspect-ratio: 1/1.25;
 	transform-origin: top left;
-	top: -37rem;
+	top: -34rem;
 	left: 23rem;
+	border-top-right-radius: 5.5rem;
 }
