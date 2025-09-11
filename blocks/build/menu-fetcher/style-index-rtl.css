@@ -18,7 +18,7 @@
   color: var(--wp--preset--color--primary) !important;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item {
-  padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
+  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item a {
   letter-spacing: 0.125rem;
@@ -35,15 +35,15 @@
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item:hover > a {
   background-color: var(--wp--preset--color--base);
-  box-shadow: 0 0 0 var(--wp--preset--spacing--50) var(--wp--preset--color--base);
-  border-radius: var(--wp--preset--spacing--10);
+  box-shadow: 0 0 0 1.25rem var(--wp--preset--color--base);
+  border-radius: 1rem;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item:hover > .sub-menu {
   display: block;
   position: absolute;
   top: 100%;
-  right: 0;
-  left: 0;
+  right: 3rem;
+  left: 3rem;
   background-color: var(--wp--preset--color--base);
   padding: var(--wp--preset--spacing--60) 0;
   border-radius: var(--wp--custom--border--radius--menu);
@@ -52,7 +52,7 @@
   display: block;
   margin: 0;
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 .menu__primary.wp-block-pm-menu-fetcher > ul.menu > li.menu-item:hover > .sub-menu li.menu-item a {
   display: inline-block;
@@ -68,7 +68,7 @@
 
 .wp-block-pm-menu-fetcher.menu__secondary {
   position: fixed;
-  bottom: 0;
+  bottom: -0.75rem;
   margin: auto;
   width: 100%;
   font-family: var(--wp--preset--font-family--highlight);
@@ -82,8 +82,8 @@
   gap: var(--wp--preset--spacing--50);
   list-style-type: none;
   margin: auto;
-  padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
-  border-radius: var(--wp--custom--border--radius--md);
+  padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50) var(--wp--preset--spacing--50) var(--wp--preset--spacing--50);
+  border-radius: 1.5rem;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .wp-block-pm-menu-fetcher.menu__secondary ul.menu li.menu-item a {
@@ -94,12 +94,23 @@
   letter-spacing: 0.1rem;
 }
 
+footer {
+  margin: 0;
+}
+
+.mentions-wide {
+  max-width: none !important;
+}
+
+.wp-block-pm-menu-fetcher.menu__home-footer {
+  max-width: none;
+}
 .wp-block-pm-menu-fetcher.menu__home-footer ul.menu {
   padding: 0;
   margin: 0;
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .wp-block-pm-menu-fetcher.menu__home-footer ul.menu li.menu-item a {
   text-decoration: none;

@@ -12,7 +12,15 @@
 		pointer-events: none	
 	}
 
-	.pm-year-btn a:hover {
+	.pm-year-btn {
+
+		a:hover {
+			cursor: pointer;
+		}
+	}
+
+	.pm-year-filter-item:hover {
+		color: var(--wp--preset--color--primary);
 		cursor: pointer;
 	}
 
@@ -30,7 +38,8 @@
 				position: absolute;
 				left: 0rem;
 				width: 15rem;
-				top: 7rem;
+				top: 6rem;
+				margin: 0;
 				background: var(--wp--preset--color--base);
 			}
 		}

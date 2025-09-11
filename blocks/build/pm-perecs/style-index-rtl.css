@@ -4,14 +4,15 @@
 .wp-block-pm-perecs {
   display: flex;
   flex-direction: row;
-  gap: var(--wp--preset--spacing--60);
+  gap: var(--wp--preset--spacing--30);
 }
 .wp-block-pm-perecs .perec-column__index {
   width: 10rem;
+  flex-shrink: 0;
 }
 .wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected {
   background-color: var(--wp--preset--color--primary-light);
-  font-size: 1.1em;
+  font-size: 0.7em;
 }
 .wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected .perec-index__author {
   color: var(--wp--preset--color--primary);
@@ -36,9 +37,10 @@
   border-bottom: 1px solid var(--wp--preset--color--base-darker);
 }
 .wp-block-pm-perecs .perec-column__content {
-  padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--60);
+  padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--60);
   flex-grow: 1;
   background-color: var(--wp--preset--color--primary-light);
+  font-size: 0.7rem;
 }
 .wp-block-pm-perecs .perec-column__content .perec-content__text p {
   font-style: italic;
@@ -49,6 +51,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   aspect-ratio: 817/1209;
-  width: 4rem;
+  width: 2.5rem;
   margin: auto;
+  margin-bottom: 1.5rem;
 }

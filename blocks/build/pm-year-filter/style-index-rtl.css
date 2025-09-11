@@ -17,6 +17,10 @@
 .pm-post .pm-year-btn a:hover {
   cursor: pointer;
 }
+.pm-post .pm-year-filter-item:hover {
+  color: var(--wp--preset--color--primary);
+  cursor: pointer;
+}
 .pm-post .wp-block-post-featured-image {
   margin: 0;
 }
@@ -32,7 +36,8 @@
   position: absolute;
   right: 0rem;
   width: 15rem;
-  top: 7rem;
+  top: 6rem;
+  margin: 0;
   background: var(--wp--preset--color--base);
 }
 
