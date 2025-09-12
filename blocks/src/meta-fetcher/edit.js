@@ -4,17 +4,45 @@ import {
     PanelBody,
     SelectControl
 } from '@wordpress/components';
-import ServerSideRender from '@wordpress/server-side-render';
+import { ServerSideRender } from '@wordpress/server-side-render';
 
-import { useEntityProp } from '@wordpress/core-data';
-
+import { useSelect } from '@wordpress/data';
 import './editor.scss';
 
 export default function Edit({ attributes, setAttributes, context }) {
 
-    const [meta, setMeta] = useEntityProp('postType', context.postType, 'meta', context.postId);
-	const metaKeys = meta ? Object.keys(meta).filter(key => key.startsWith('pm__')) : [];
-console.log(context, meta)
+	const { postMetaKeys, isLoading } = useSelect((select) => {
+
+		const { getEntityRecords, getEntityRecord, hasFinishedResolution } = select('core');
+		
+		const posts = getEntityRecords('postType', context.postType, {
+			per_page: 1,
+			_fields: 'id',
+		});
+		
+		const firstPost = posts?.[0]?.id;
+		
+		let postMeta = null;
+		let isLoadingMeta = true;
+		
+		if ( firstPost ){
+			const post = getEntityRecord('postType', context.postType, firstPost);
+			postMeta = post?.meta;
+			isLoadingMeta = !hasFinishedResolution('getEntityRecord', ['postType', context.postType, firstPost]);
+		}
+		
+		const isLoadingPosts = !hasFinishedResolution('getEntityRecords', ['postType', context.postType, { per_page: 1, _fields: 'id' }]);
+		
+		return {
+			postMetaKeys: postMeta,
+			isLoading: isLoadingPosts || isLoadingMeta
+		};
+	}, []);
+
+	if (isLoading) {
+		return <div { ...useBlockProps() }>Loading...</div>;
+	}
+
     const onChangeMetaKey = (newMetaKey) => {
         setAttributes({ metaKey: newMetaKey });
     };
@@ -29,7 +57,7 @@ console.log(context, meta)
 						value={ attributes.metaKey }
 						options={ [
 							{ label: 'Select a Meta', value: '' },
-							...Object.keys(meta).map(meta => ({ label: meta, value: meta}))
+							...Object.keys(postMetaKeys).map(meta => ({ label: meta, value: meta}))
 						] }
 						onChange={ onChangeMetaKey }
 					/>
@@ -37,17 +65,8 @@ console.log(context, meta)
 				</Panel>
 			</InspectorControls>
 
-			<div>
-				{
-					attributes.selectedMenu ?
-						<ServerSideRender
-							block="pm/meta-fetcher"
-							attributes={attributes}
-						/>
-					:
-						<p>Select a meta</p>
-				}
-			</div>
+			<div>meta content {attributes.metaKey}</div>
 		</div>
-	); 
+	);  
+
 }

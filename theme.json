@@ -234,6 +234,15 @@
 			"fontWeight": "400"
 		}
 	},
+	"customTemplates": [
+		{
+			"name": "jures",
+			"postTypes": [
+				"jury"
+			],
+			"title": "Jurés"
+		}
+	],
 	"templateParts": [
 		{
 			"area": "header",

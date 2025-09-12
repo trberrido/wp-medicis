@@ -13,8 +13,6 @@ export default function Edit( { attributes, setAttributes } ) {
 		return menuLocations || {};
 	}, []);
 
-	console.log(registeredMenus);
-
 	return (
 		<Fragment>
 			<InspectorControls key='Settings'>
