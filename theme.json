@@ -57,6 +57,11 @@
 			]
 		},
 		"custom": {
+			"depth": {
+				"back": 0,
+				"content": 10,
+				"front": 50
+			},
 			"border": {
 				"radius": {
 					"lg": "3rem",
@@ -236,11 +241,16 @@
 	},
 	"customTemplates": [
 		{
-			"name": "jures",
+			"name": "pages--jury",
+			"postTypes": [ "page", "jury" ],
+			"title": "Template Jurés"
+		},
+		{
+			"name": "pages--graduate",
 			"postTypes": [
-				"jury"
+				"page"
 			],
-			"title": "Jurés"
+			"title": "Template Lauréats"
 		}
 	],
 	"templateParts": [
