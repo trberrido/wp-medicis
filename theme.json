@@ -193,6 +193,17 @@
 		}
 	},
 	"styles": {
+		"blocks": {
+			"core/heading": {
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				}
+			}
+		},
 		"color": {
 			"background": "var(--wp--preset--color--base-darker)",
 			"text": "var(--wp--preset--color--contrast)"
