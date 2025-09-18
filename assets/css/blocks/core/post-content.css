@@ -1,0 +1,4 @@
+.home .wp-block-post-content {
+	position: relative;
+	z-index: 1;
+}
