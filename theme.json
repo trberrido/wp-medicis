@@ -35,6 +35,11 @@
 					"slug": "contrast-light"
 				},
 				{
+					"color": "#CCCDC8",
+					"name": "Texte très léger",
+					"slug": "contraster-lighter"
+				},
+				{
 					"color": "#FFFFFF",
 					"name": "Texte fond sombre",
 					"slug": "contrast-inverted"
