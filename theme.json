@@ -251,6 +251,13 @@
 				"page"
 			],
 			"title": "Template Lauréats"
+		},
+		{
+			"name": "pages--no-gif",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page sans en-tête animé"
 		}
 	],
 	"templateParts": [
