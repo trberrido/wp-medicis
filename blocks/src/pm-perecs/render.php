@@ -6,8 +6,8 @@ $grouped_posts = [];
 $juries = get_terms([
     'taxonomy'      => 'perec_category',
     'hide_empty'    => true,
-    'orderby'       => 'name',
-    'order'         => 'DESC'
+    'orderby'       => 'menu_order',
+    'order'         => 'ASC'
 ]);
 
 foreach ($juries as $jury) {
@@ -15,8 +15,8 @@ foreach ($juries as $jury) {
         'post_type'         => 'perec',
         'posts_per_page'    => -1,
         'post_status'       => 'publish',
-        'orderby'           => 'date',
-        'order'             => 'DESC',
+        'orderby'           => 'menu_order',
+        'order'             => 'ASC',
         'tax_query'         => [
             [
                 'taxonomy'  => 'perec_category',
