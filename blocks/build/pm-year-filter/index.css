@@ -6,11 +6,8 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-blocks input[type=text] {
-  font-size: 1em;
-  color: inherit;
-  background: inherit;
-  border: 0;
+.pm-post.pm-hidden:first-child {
+  display: flex !important;
 }
 
 /*# sourceMappingURL=index.css.map*/
