@@ -198,3 +198,26 @@
 .mp-align-top > p {
 	word-break: keep-all;
 }
+
+@media (max-width: 60rem) {
+	:root {
+		--wp--style--global--content-size: 98%!important;
+		--wp--style--global--wide-size: 98%!important;
+	}
+	html{ margin-top: 0!important ;}
+	.wp-site-blocks > .wp-block-group {
+		padding: 0!important
+	}
+	.wp-block-site-title {
+		font-size: 3rem!important;
+	}
+	.parchment-top::after,
+	.parchment-top::before,
+	.parchment-background::before,
+	.parchment-background-bottom-container,
+	.parchment-bottom { display: none!important}
+	.parchment-top {
+		min-height: 100%;
+		height: 100%;
+	}
+}

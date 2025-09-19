@@ -2,7 +2,7 @@ import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { Panel, PanelBody, SelectControl, CheckboxControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
-import { ServerSideRender } from '@wordpress/server-side-render';
+import ServerSideRender from '@wordpress/server-side-render';
 
 import './editor.scss';
 
