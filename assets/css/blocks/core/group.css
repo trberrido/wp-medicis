@@ -236,3 +236,29 @@
 		height: 100%;
 	}
 }
+
+.pm-fleur-one {
+	background-image: url('/wp-content/themes/wp-medicis/assets/images/06_Fleur.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	z-index: 0;
+	left: -5rem;
+  top: 10rem;
+}
+
+.pm-fleur-two {
+	background-image: url('/wp-content/themes/wp-medicis/assets/images/06_Fleur.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	z-index: 0;
+	right: -3rem;
+  top: 1rem;
+}
