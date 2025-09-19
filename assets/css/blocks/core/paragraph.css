@@ -127,3 +127,11 @@ p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 
 .has-text-align-center p { text-align: center }
 .pm-hidden { display: none }
+
+
+@media (max-width: 60rem) {
+	p {
+		min-width: 100%!important;
+		padding: unset!important;
+	}
+}
