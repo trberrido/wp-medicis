@@ -110,6 +110,11 @@ footer {
   max-width: none !important;
 }
 
+@media (min-width: 60rem) {
+  .wp-block-pm-menu-fetcher.menu__home-footer .menu {
+    flex-direction: column !important;
+  }
+}
 .wp-block-pm-menu-fetcher.menu__home-footer {
   max-width: none;
 }
