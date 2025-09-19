@@ -58,34 +58,25 @@ var __webpack_exports__ = {};
   \**********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
-/**
- * WordPress dependencies
- */
 
 const {
   state
-} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block', {
+} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('pm/menu-fetcher', {
   state: {
-    get themeText() {
-      return state.isDark ? state.darkText : state.lightText;
+    get isOpen() {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      return context.isOpen || false;
     }
   },
   actions: {
-    toggleOpen() {
+    toggle: () => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.isOpen = !context.isOpen;
-    },
-    toggleTheme() {
-      state.isDark = !state.isDark;
-    }
-  },
-  callbacks: {
-    logIsOpen: () => {
       const {
-        isOpen
-      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-      // Log the value of `isOpen` each time it changes.
-      console.log(`Is open: ${isOpen}`);
+        ref
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+      console.log('CLIC');
+      ref.closest('.wp-block-pm-menu-fetcher').classList.toggle('--open');
     }
   }
 });

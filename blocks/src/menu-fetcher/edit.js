@@ -1,8 +1,8 @@
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
-import { Panel, PanelBody, SelectControl } from '@wordpress/components';
+import { Panel, PanelBody, SelectControl, CheckboxControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
-import ServerSideRender from '@wordpress/server-side-render';
+import { ServerSideRender } from '@wordpress/server-side-render';
 
 import './editor.scss';
 
@@ -17,17 +17,26 @@ export default function Edit( { attributes, setAttributes } ) {
 		<Fragment>
 			<InspectorControls key='Settings'>
 				<Panel>
-					<PanelBody initialOpen={ true } title='Select menu'>
-					<SelectControl
-						label="Menus list"
-						value={ attributes.selectedMenu }
-						options={[
-							{ label: 'Select a Menu', value: '' },
-							...Object.entries(registeredMenus).map( ([key, value]) => ( { label: value.description, value: value.name } ) )
-						]}
-						onChange={(selectedMenu) => setAttributes({ selectedMenu })}
-					/>
+					<PanelBody initialOpen={ true } title='Options'>
+						<SelectControl
+							label="Menus list"
+							value={ attributes.selectedMenu }
+							options={[
+								{ label: 'Select a Menu', value: '' },
+								...Object.entries(registeredMenus).map( ([key, value]) => ( { label: value.description, value: value.name } ) )
+							]}
+							onChange={(selectedMenu) => setAttributes({ ...attributes, selectedMenu: selectedMenu })}
+						/>
+						<CheckboxControl
+							label='Mobile: display burger button'
+							checked={ attributes.hasMobileBurger }
+							onChange={(value) => setAttributes({ ...attributes, hasMobileBurger: value })}
+						/>
 					</PanelBody>
+					<PanelBody>
+						
+					</PanelBody>
+				
 				</Panel>
 			</InspectorControls>
 

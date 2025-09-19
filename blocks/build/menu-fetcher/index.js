@@ -8,7 +8,7 @@
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/menu-fetcher","version":"0.1.0","title":"Menu fetcher","category":"widgets","icon":"menu","description":"Display a classic menu","supports":{"html":false,"spacing":{"margin":true,"padding":true},"typography":{"fontSize":true},"layout":{"allowOrientation":true,"default":{"orientation":"horizontal"},"allowSwitching":true}},"attributes":{"selectedMenu":{"type":"string","default":""}},"textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/menu-fetcher","version":"0.1.0","title":"Menu fetcher","category":"widgets","icon":"menu","description":"Display a classic menu","supports":{"html":false,"interactivity":true,"spacing":{"margin":true,"padding":true},"typography":{"fontSize":true},"layout":{"allowOrientation":true,"default":{"orientation":"horizontal"},"allowSwitching":true}},"attributes":{"hasMobileBurger":{"type":"boolean","default":false},"selectedMenu":{"type":"string","default":""}},"textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
 
 /***/ }),
 
@@ -52,11 +52,11 @@ function Edit({
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
           initialOpen: true,
-          title: "Select menu",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+          title: "Options",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
             label: "Menus list",
             value: attributes.selectedMenu,
             options: [{
@@ -67,14 +67,22 @@ function Edit({
               value: value.name
             }))],
             onChange: selectedMenu => setAttributes({
-              selectedMenu
+              ...attributes,
+              selectedMenu: selectedMenu
             })
-          })
-        })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CheckboxControl, {
+            label: "Mobile: display burger button",
+            checked: attributes.hasMobileBurger,
+            onChange: value => setAttributes({
+              ...attributes,
+              hasMobileBurger: value
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {})]
       })
     }, 'Settings'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)(),
-      children: attributes.selectedMenu ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_4___default()), {
+      children: attributes.selectedMenu ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_4__.ServerSideRender, {
         block: "pm/menu-fetcher",
         attributes: attributes
       }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
