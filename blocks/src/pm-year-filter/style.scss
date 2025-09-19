@@ -21,14 +21,12 @@
 	}
 	.pm-year-btn {
 
-		a:hover {
+		&:hover {
 			cursor: pointer;
 		}
 
 		display: flex;
 		gap: 2rem;
-
-
 
 		&::after {
 			transition: transform .1s ease-in-out;
@@ -45,11 +43,11 @@
 		@media (max-width: 60rem) {
 			a {
 
-				font-size: 4rem;
+				font-size: 2rem;
 			}
 
 			&::after {
-				width: 3rem;
+				width: 2rem;
 			}
 		}
 	}
