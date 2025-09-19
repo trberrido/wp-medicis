@@ -201,8 +201,8 @@
 
 @media (max-width: 60rem) {
 	:root {
-		--wp--style--global--content-size: 98%!important;
-		--wp--style--global--wide-size: 90%!important;
+		--wp--style--global--content-size: 90%!important;
+		--wp--style--global--wide-size: 98%!important;
 	}
 	html{ margin-top: 0!important ;}
 	.wp-site-blocks > .wp-block-group {
