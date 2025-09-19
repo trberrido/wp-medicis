@@ -6,8 +6,20 @@
   flex-direction: row;
   gap: var(--wp--preset--spacing--30);
 }
+@media (max-width: 60rem) {
+  .wp-block-pm-perecs {
+    flex-direction: column;
+  }
+}
 .wp-block-pm-perecs .perec-column__index {
   width: 10rem;
+}
+@media (max-width: 60rem) {
+  .wp-block-pm-perecs .perec-column__index {
+    width: auto;
+  }
+}
+.wp-block-pm-perecs .perec-column__index {
   flex-shrink: 0;
 }
 .wp-block-pm-perecs .perec-column__index .perec-index__item.pm-selected {

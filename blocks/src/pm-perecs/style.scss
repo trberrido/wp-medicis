@@ -1,10 +1,19 @@
 .wp-block-pm-perecs {
+
 	display: flex;
 	flex-direction: row;
 	gap: var(--wp--preset--spacing--30);
 
+	@media (max-width: 60rem) {
+		flex-direction: column;
+	}
+
 	.perec-column__index {
 		width: 10rem;
+
+	@media (max-width: 60rem) {
+		width: auto;
+	}
 		flex-shrink: 0;
 		.perec-index__item.pm-selected {
 			background-color: var(--wp--preset--color--primary-light);
