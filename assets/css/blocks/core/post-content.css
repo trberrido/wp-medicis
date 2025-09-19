@@ -2,3 +2,10 @@
 	position: relative;
 	z-index: 1;
 }
+
+@media (max-width: 60rem) {
+
+	.entry-content.wp-block-post-content {
+		padding: unset!important;
+	}
+}

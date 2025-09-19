@@ -130,6 +130,7 @@ p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 
 
 @media (max-width: 60rem) {
+
 	p {
 		min-width: 100%!important;
 		padding: unset!important;
