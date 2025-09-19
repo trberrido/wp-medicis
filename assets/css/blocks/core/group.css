@@ -220,6 +220,7 @@
 		--wp--style--global--wide-size: 98%!important;
 	}
 	html{ margin-top: 0!important ;}
+	body { padding-bottom: 3rem!important }
 	.wp-site-blocks > .wp-block-group {
 		padding: 0!important
 	}
