@@ -10,6 +10,9 @@
 }
 
 @media (max-width: 60rem) {
+	.wp-block-buttons {
+		padding: 0!important;
+	}
 	.wp-block-button__link {
 		word-break: initial!important;
 	}
