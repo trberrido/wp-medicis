@@ -9,6 +9,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: baseline;
+
+}
+
+@media (max-width: 60rem) {
+	.wp-block-group.is-style-ellipsis {
+		flex-direction: column;
+		gap: .5rem;
+	}
 }
 
 .wp-block-group.is-style-ellipsis :first-child {
