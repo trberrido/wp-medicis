@@ -41,6 +41,17 @@
 			background-size: contain;
 			background-image: url("data:image/svg+xml,%3Csvg width='1237' height='642' viewBox='0 0 1237 642' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.903 30.0005L618.501 599.751L1206.1 30.0004' stroke='%23FF0A0A' stroke-width='60' stroke-linecap='round'/%3E%3C/svg%3E");
 		}
+
+		@media (max-width: 60rem) {
+			a {
+
+				font-size: 4rem;
+			}
+
+			&::after {
+				width: 3rem;
+			}
+		}
 	}
 
 	.pm-year-filter-item:hover {
