@@ -14,6 +14,7 @@ function pm__register_blocks_styles(): void {
 		'core/group'	=> array(
 			'callout'		=> 'Encart',
 			'ellipsis'		=> 'Points',
+			'popup'			=> 'Popine',
 		)
 	);
 

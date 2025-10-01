@@ -263,3 +263,56 @@
 	right: -3rem;
   top: 1rem;
 }
+
+.wp-block-group.is-style-popup {
+}
+
+ .wp-block-group.is-style-popup > .popup__inner:not(.block-editor-block-list__block) {
+	display: none;
+} 
+
+.content-target .wp-element-caption {
+	font-family: var(--wp--preset--font-family--highlight);
+}
+
+.pm-popup__target {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	min-height: 100vh;
+	z-index: 100;
+	background: rgba(0,0,0,.8);
+	padding:3rem;
+	padding-bottom: 25rem;
+}
+
+.pm-popup--open .pm-popup__target {
+	display: block;
+}
+
+.pm-popup__close {
+	position:absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 3rem;
+	color: white;
+	cursor: pointer;
+	background-color: var(--wp--preset--color--primary);
+	margin: 0!important;
+	padding: .5rem;
+	line-height: 1.75rem;
+
+}
+
+@media (max-width: 60rem) {
+	p.pm-popup__close {
+		padding: .5rem!important;
+		min-width: auto!important;
+	}
+}
+
+.pm-popup__close:hover {
+	cursor: pointer;
+	background-color: var(--wp--preset--color--primary-dark);
+}
