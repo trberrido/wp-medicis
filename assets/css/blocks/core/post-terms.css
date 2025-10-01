@@ -1,0 +1,9 @@
+.taxonomy-graduate_year.wp-block-post-terms.pm-in-single {
+	width: fit-content;
+	margin: 0!important;
+}
+.taxonomy-graduate_year.wp-block-post-terms.pm-in-single a {
+	text-decoration: none;
+	text-align: left;
+	font-size: 2em !important;
+}

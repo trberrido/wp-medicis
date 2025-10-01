@@ -77,7 +77,7 @@
 			}
 		},
 		"layout": {
-			"allowEditing": false,
+			"allowEditing": true,
 			"contentSize": "41rem",
 			"wideSize": "55rem"
 		},
