@@ -126,7 +126,7 @@
 
 .parchment-top {
 	width: 100%;
-	height: calc(100% - 20rem);
+	height: calc(100% - 10rem);
 	min-height: 50rem;
 	border-radius: 5rem;
 	border-bottom-right-radius: 4rem;
