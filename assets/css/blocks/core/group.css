@@ -269,7 +269,13 @@
 
  .wp-block-group.is-style-popup > .popup__inner:not(.block-editor-block-list__block) {
 	display: none;
-} 
+}
+
+.content-target {
+	overflow-y: scroll;
+	max-height: 95vh;
+	padding-bottom: 5rem;
+}
 
 .content-target .wp-element-caption {
 	font-family: var(--wp--preset--font-family--highlight);
@@ -277,7 +283,7 @@
 
 .pm-popup__target {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: 100vw;
 	min-height: 100vh;
@@ -285,6 +291,10 @@
 	background: rgba(0,0,0,.8);
 	padding:3rem;
 	padding-bottom: 25rem;
+}
+
+.pm-popup--open {
+	overflow-y: hidden;
 }
 
 .pm-popup--open .pm-popup__target {
