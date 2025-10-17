@@ -1,0 +1,8 @@
+.wp-block-search__inside-wrapper {
+	max-width: 25.5rem;
+	margin: auto;
+}
+
+.wp-block-search__button {
+	border: 1px solid currentColor!important
+}
