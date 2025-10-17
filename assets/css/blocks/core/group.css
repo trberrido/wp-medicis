@@ -219,9 +219,15 @@
 		--wp--style--global--content-size: 90%!important;
 		--wp--style--global--wide-size: 98%!important;
 	}
-	html{ margin-top: 0!important ;}
+	.pm-home-group-2 {
+		padding: 0!important;
+	}
+	html{
+		margin-top: 0!important;
+		overflow-x: hidden;
+	}
 	body { padding-bottom: 3rem!important }
-	.wp-site-blocks > .wp-block-group {
+	.wp-site-blocks > .wp-block-group:not(.pm-home-footer) {
 		padding: 0!important
 	}
 	.wp-block-site-title {

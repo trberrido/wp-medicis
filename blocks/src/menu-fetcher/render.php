@@ -3,7 +3,8 @@
 	$block_id = wp_unique_id( 'pm-menu-fetcher-' );
 
 	$context = array(
-		'isOpen' => false
+		'isOpen' => false,
+		'cloneHappened' => false
 	);
 
 	if ( empty( $attributes['selectedMenu'] ) ) {
