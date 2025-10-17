@@ -1,8 +1,6 @@
 <?php
-/**
- * Graduate Display Function
- * Add this to your theme's functions.php file
- */
+
+/* Used by block pm/palmares */
 
 function print_td($items){ ?>
 
