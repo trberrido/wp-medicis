@@ -1,5 +1,8 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
 
+// Relevanssi light
+add_filter( 'relevanssi_light_custom_fields', function( $fields ) { return array( 'pm__graduate__author_name' ); } );
+
 add_action( 'init', 'pm__graduate__register_metas' );
 
 function pm__graduate__register_metas() {
