@@ -151,7 +151,7 @@ footer {
     display: none !important;
   }
   .wp-block-pm-menu-fetcher.menu__secondary:not(.secondary-mobile) {
-    display: none;
+    display: none !important;
   }
   #menu-menu-footer-home .menu-item {
     margin: 0.5rem 0;
@@ -311,6 +311,7 @@ footer {
 
 .secondary-mobile {
   display: none;
+  height: 0;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -169,7 +169,7 @@ footer {
 
 
 	.wp-block-pm-menu-fetcher.menu__secondary:not(.secondary-mobile) {
-		display: none;
+		display: none!important;
 	}
 
 	#menu-menu-footer-home {
@@ -344,5 +344,5 @@ footer {
 
 .secondary-mobile {
 	display: none;
-
+	height: 0;
 }

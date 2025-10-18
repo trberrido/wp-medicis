@@ -263,16 +263,17 @@
 		},
 		{
 			"name": "pages--graduate",
-			"postTypes": [
-				"page"
-			],
+			"postTypes": [ "page" ],
 			"title": "Template Lauréats"
 		},
 		{
+			"name": "pages--flower",
+			"postTypes": [ "page" ],
+			"title": "Flower Power"
+		},
+		{
 			"name": "pages--no-gif",
-			"postTypes": [
-				"page"
-			],
+			"postTypes": [ "page" ],
 			"title": "Page sans en-tête animé"
 		}
 	],

@@ -27,7 +27,7 @@ function pm__modify_jury_query_exclude_memoriam( $query ) {
             array(
                 'taxonomy' => 'jury_category',
                 'field'    => 'name',
-                'terms'    => 'in memoriam',
+                'terms'    => 'In memoriam',
                 'operator' => 'NOT IN',
             ),
         );

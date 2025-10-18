@@ -1,7 +1,22 @@
 .wp-block-group.is-style-callout {
 	background-color: var(--wp--preset--color--primary-light);
 	font-size: .8em;
-	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--60);	
+	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--60);
+	position: relative;
+}
+
+.wp-block-group.is-style-callout::before {
+	content: '';
+	position: absolute;
+	right: -1.5rem;
+	top: -3.5rem;
+	display: block;
+	height: 5rem;
+	aspect-ratio: 1/2;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('/wp-content/themes/wp-medicis/assets/images/plume--mini.webp');
 }
 
 .wp-block-group.is-style-ellipsis {
