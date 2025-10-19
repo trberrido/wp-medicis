@@ -25,3 +25,7 @@
 .pm-popup__target .wp-block-gallery.has-nested-images figure.wp-block-image:has(figcaption)::before {
 	display: none!important;
 }
+
+@media (max-width: 60rem) {
+	.wp-block-gallery > .wp-block-image { width: 100% !important }
+}

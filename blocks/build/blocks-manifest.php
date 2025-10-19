@@ -1,6 +1,25 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'goto-parent' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'pm/goto-parent',
+		'version' => '0.1.0',
+		'title' => 'Goto Parent Page',
+		'category' => 'widgets',
+		'icon' => 'undo',
+		'description' => 'If the page a parent page, display its link.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'pm',
+		'editorStyle' => 'file:./index.css',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'menu-fetcher' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -56,7 +75,8 @@ return array(
 		'description' => 'Pick and display a meta',
 		'supports' => array(
 			'typography' => array(
-				'fontSize' => true
+				'fontSize' => true,
+				'fontStyle' => true
 			)
 		),
 		'attributes' => array(
@@ -74,6 +94,25 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
+	),
+	'palmares' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'pm/palmares',
+		'version' => '0.1.0',
+		'title' => 'Palmares',
+		'category' => 'widgets',
+		'icon' => 'editor-table',
+		'description' => 'Palmares',
+		'textdomain' => 'pm',
+		'viewScriptModule' => 'file:./view.js',
+		'editorStyle' => 'file:./index.css',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'supports' => array(
+			'interactivity' => true
+		)
 	),
 	'pm-perecs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -114,5 +153,24 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php',
 		'viewScriptModule' => 'file:./view.js'
+	),
+	'related' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'pm/related',
+		'version' => '0.1.0',
+		'title' => 'Related links',
+		'category' => 'widgets',
+		'icon' => 'admin-links',
+		'description' => 'Graduates: display other graduates',
+		'textdomain' => 'pm',
+		'editorStyle' => 'file:./index.css',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		)
 	)
 );
