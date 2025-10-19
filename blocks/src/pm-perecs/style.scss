@@ -2,7 +2,32 @@
 
 	display: flex;
 	flex-direction: row;
-	gap: var(--wp--preset--spacing--30);
+	gap: var(--wp--preset--spacing--50);
+
+	width: calc(100% + 10rem);
+	max-width: none;
+	margin-left: -5rem !important;
+
+  @media (max-width: 60rem) {
+	width: 95%;
+	margin-left: auto !important;
+  }
+
+  .pm-content__mobile,
+  .pm-content__mobile.visible {
+		display: none;
+	}
+
+    @media (max-width: 60rem) {
+
+		.perec-column__content {
+			display: none;
+		}
+
+		.pm-content__mobile.visible {
+			display: block;
+		}
+	}
 
 	@media (max-width: 60rem) {
 		flex-direction: column;
@@ -29,6 +54,7 @@
 			}
 			.perec-index__title {
 				margin: var(--wp--preset--spacing--10) 0;
+				font-style: italic;
 				&:hover {
 					cursor: pointer;
 					color: var(--wp--preset--color--primary)

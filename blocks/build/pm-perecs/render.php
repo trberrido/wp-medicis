@@ -50,11 +50,20 @@ foreach ($juries as $jury) {
         <?php
             $index_title = 0; 
             foreach ($posts as $post) : ?>
-            <h3
-                data-titleid="<?php echo $index_title; ?>"
-                data-wp-on--click="actions.selection"
-                <?php echo wp_interactivity_data_wp_context( ['juryId' => $index_jury . '', 'titleId' => $index_title . '' ] ); ?>
-                class="perec-index__title has-450-font-size"><?php echo $post->post_title; ?></h3>
+            <div>
+                <h3
+                    data-titleid="<?php echo $index_title; ?>"
+                    data-wp-on--click="actions.selection"
+                    <?php echo wp_interactivity_data_wp_context( ['juryId' => $index_jury . '', 'titleId' => $index_title . '' ] ); ?>
+                    class="perec-index__title has-450-font-size"><?php echo $post->post_title; ?></h3>
+
+                <div
+                    data-juryid="<?php echo $index_jury; ?>"
+                    data-titleid="<?php echo $index_title; ?>"
+                    class="pm-content__mobile">
+                    <?php echo $post->post_content; ?>
+                </div>
+            </div>
         <?php
             $index_title += 1;
             endforeach; ?>
@@ -95,5 +104,3 @@ foreach ($juries as $jury) {
             endforeach; ?>
     </div>
 </div>
-
-<?php //console($grouped_posts[array_key_first($grouped_posts)]); ?>

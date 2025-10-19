@@ -4,14 +4,24 @@
 import { store, getContext, getElement } from '@wordpress/interactivity';
 
 const updatePerec = (currentJuryId, currentTitleId) => {
-	console.log('looooooooooooool')
+
 	const { ref } = getElement();
 	const context = getContext();
+
+	ref.closest('.wp-block-pm-perecs').querySelectorAll('.pm-content__mobile').forEach( ( post ) => {
+		const juryId = post.dataset.juryid;
+		const titleId = post.dataset.titleid;
+		if ( titleId === currentTitleId && juryId === currentJuryId ){
+			post.classList.add('visible');
+		} else {
+			post.classList.remove('visible');
+		}
+	} );
+
 	ref.closest('.wp-block-pm-perecs').querySelectorAll('.perec-content__post').forEach( ( post ) => {
 		const juryId = post.dataset.juryid;
 		const titleId = post.dataset.titleid;
 		if ( titleId === currentTitleId && juryId === currentJuryId ){
-			console.log('ppppppppppppppp')
 			post.classList.remove('pm-hidden');
 		} else {
 			post.classList.add('pm-hidden');

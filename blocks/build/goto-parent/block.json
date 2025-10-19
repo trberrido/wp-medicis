@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "pm/goto-parent",
+  "version": "0.1.0",
+  "title": "Goto Parent Page",
+  "category": "widgets",
+  "icon": "undo",
+  "description": "If the page a parent page, display its link.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "pm",
+  "editorStyle": "file:./index.css",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

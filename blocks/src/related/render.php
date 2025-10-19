@@ -47,7 +47,6 @@
 					'url' => $post->guid,
 				);
 			}, $related_posts);
-		//	console($related_posts);
 
 		} else { return ; }
 

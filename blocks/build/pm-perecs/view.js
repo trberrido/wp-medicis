@@ -63,16 +63,23 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const updatePerec = (currentJuryId, currentTitleId) => {
-  console.log('looooooooooooool');
   const {
     ref
   } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
   const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+  ref.closest('.wp-block-pm-perecs').querySelectorAll('.pm-content__mobile').forEach(post => {
+    const juryId = post.dataset.juryid;
+    const titleId = post.dataset.titleid;
+    if (titleId === currentTitleId && juryId === currentJuryId) {
+      post.classList.add('visible');
+    } else {
+      post.classList.remove('visible');
+    }
+  });
   ref.closest('.wp-block-pm-perecs').querySelectorAll('.perec-content__post').forEach(post => {
     const juryId = post.dataset.juryid;
     const titleId = post.dataset.titleid;
     if (titleId === currentTitleId && juryId === currentJuryId) {
-      console.log('ppppppppppppppp');
       post.classList.remove('pm-hidden');
     } else {
       post.classList.add('pm-hidden');
