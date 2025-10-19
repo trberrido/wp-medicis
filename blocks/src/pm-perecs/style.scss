@@ -9,7 +9,7 @@
 	margin-left: -5rem !important;
 
   @media (max-width: 60rem) {
-	width: 95%;
+	width: 100%;
 	margin-left: auto !important;
   }
 
@@ -48,7 +48,7 @@
 			}
 		}
 		.perec-index__item {
-			padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--20);
+			padding: 1.5rem;
 			.perec-index__author.has-100-font-size {
 				text-align: left!important;
 			}
