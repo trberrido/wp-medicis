@@ -8,8 +8,12 @@
   "icon": "editor-table",
   "description": "Palmares",
   "textdomain": "pm",
+  "viewScriptModule": "file:./view.js",
   "editorStyle": "file:./index.css",
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
-  "render": "file:./render.php"
+  "render": "file:./render.php",
+  "supports": {
+    "interactivity": true
+  }
 }

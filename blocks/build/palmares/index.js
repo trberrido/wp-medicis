@@ -8,7 +8,7 @@
   \*********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/palmares","version":"0.1.0","title":"Palmares","category":"widgets","icon":"editor-table","description":"Palmares","textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/palmares","version":"0.1.0","title":"Palmares","category":"widgets","icon":"editor-table","description":"Palmares","textdomain":"pm","viewScriptModule":"file:./view.js","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","supports":{"interactivity":true}}');
 
 /***/ }),
 
