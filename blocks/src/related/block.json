@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pm/related",
+	"version": "0.1.0",
+	"title": "Related links",
+	"category": "widgets",
+	"icon": "admin-links",
+	"description": "Graduates: display other graduates",
+	"textdomain": "pm",
+	"editorStyle": "file:./index.css",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"usesContext": [
+			"postId", "postType"
+		]
+}

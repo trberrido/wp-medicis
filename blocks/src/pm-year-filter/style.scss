@@ -1,6 +1,10 @@
 .pm-post {
 	.wp-block-post-content {
 		font-style: italic;
+		text-justify: none;
+		padding-left: 8rem;
+		padding-right: 2rem;
+		font-size: 1rem!important;
 	}
 
 	.has-text-align-left { text-align: left!important }
@@ -20,7 +24,7 @@
 		}
 	}
 	.pm-year-btn {
-
+		line-height: .7;
 		&:hover {
 			cursor: pointer;
 		}
@@ -33,7 +37,7 @@
 			content: '';
 			display: block;
 			aspect-ratio: 1;
-			width: 5rem;
+			width: 2rem;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;

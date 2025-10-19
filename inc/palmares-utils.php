@@ -4,27 +4,60 @@
 
 function print_td($items){ ?>
 
+<?php
+
+$prize_map = array(
+	'Français' => 'Littérature française',
+	'Étranger' => 'Littérature étrangère',
+	'Essai' => 'Essai'
+);
+
+
+?>
+
 	<td class="prize-cell">
 		<?php if (!empty($items)): ?>
 			<div class="prize-items">
+	
 				<?php foreach ($items as $item): ?>
 					<div class="graduate-item">
 
+						<p class="prize-label--mobile">
+							<?php echo esc_html($prize_map[$item['prize']]); ?>
+						</p>
+
 						<a class="graduate-link" href="<?php echo esc_url($item['permalink']); ?>">
 							<?php echo esc_html($item['author']); ?><br>
-							pour <?php echo esc_html($item['title']); ?>
+							<span class="graduate-link__title"><?php echo esc_html($item['title']); ?></span>
 						</a>
 
 						<div class="graduate-infos">
 							<?php if (!empty($item['thumbnail'])): ?>
-								<span class="graduate-ico">
-									<img class="graduate-img" src="<?php echo esc_url($item['thumbnail']); ?>" alt="<?php echo esc_attr($item['title']); ?>">
+								<span
+								data-wp-on--click="actions.toggleModale"
+								class="graduate-ico">
+									
+									<dialog>
+
+										<button>
+											<span
+											aria-hidden="true"
+											class="ico">×</span><span class="text">Fermer</span>
+										</button>
+										
+										<img
+										class="graduate-img"
+										src="<?php echo esc_url($item['thumbnail']); ?>"
+										alt="<?php echo esc_attr($item['title']); ?>">
+
+									</dialog>
+
 								</span>
 							<?php else: ?>
 								<span class="graduate-empty-ico"></span>
 							<?php endif; ?>
 							<?php if (!empty($item['editor'])): ?>
-								<span class="editor">/ paru <?php echo esc_html($item['editor']); ?></span>
+								<span class="graduate-publisher">/ <?php echo esc_html($item['editor']); ?></span>
 							<?php endif; ?>
 						</div>
 						
@@ -38,6 +71,25 @@ function print_td($items){ ?>
 <?php }
 
 function display_graduates_table() {
+
+	$block_id = wp_unique_id( 'pm-palmares-' );
+	$context = array(
+		'decade' 		=> null,
+		'activedecades'	=> []
+	);
+
+?>
+
+<div
+
+	<?php echo get_block_wrapper_attributes(); ?>
+	id="<?php echo esc_attr($block_id); ?>"
+	data-wp-interactive="pm/palmares"
+	data-wp-context='<?php echo wp_json_encode( $context ); ?>'
+
+>
+
+<?php
 
 	$order = isset($_GET['year_order']) ? sanitize_text_field($_GET['year_order']) : 'DESC';
 	$keyword = isset($_GET['keyword']) ? sanitize_text_field($_GET['keyword']) : '';
@@ -125,9 +177,7 @@ function display_graduates_table() {
 		krsort($organized_data);
 	} else {
 		ksort($organized_data);
-	}
-
-//	console($organized_data);    
+	} 
 
 ?>
 
@@ -144,18 +194,79 @@ function display_graduates_table() {
         type="text" 
         name="keyword" 
         value="<?php echo esc_attr($keyword); ?>" 
-        placeholder="Mot-clé..."
+        placeholder="RECHERCHER"
         class="graduate-search-input"
     />
     <button type="submit" class="search-button">Recherche</button>
-    <?php if (!empty($keyword)): ?>
+    <?php /*
+	<?php if (!empty($keyword)): ?>
         <a href="<?php echo esc_url($current_url); ?>" class="clear-search">Effacer</a>
     <?php endif; ?>
+	*/ ?>
 </form>
 
 <?php if (empty($organized_data)) : ?>
 	<p class="graduate-no-result">Aucun lauréat ne répond aux critères de recherche.</p>
 <?php else: ?>
+
+<?php	// decades filtering part
+	
+	if (empty($keyword)) :
+
+		$terms = get_terms(array(
+			'taxonomy' => 'graduate_year',
+			'hide_empty' => true,
+			'orderby' => 'name',
+			'order' => 'ASC'
+		));
+		
+		$decades = array();
+
+			foreach ($terms as $term) {
+			$year = intval($term->name);
+			
+			if ($year > 0) {
+				$decade_start = floor($year / 10) * 10;
+				$decade_key = $decade_start;
+				
+				if (!isset($decades[$decade_key])) {
+					$decades[$decade_key] = array(
+						'min_year' => $year,
+						'max_year' => $year,
+						'terms' => array()
+					);
+				}
+				
+				$decades[$decade_key]['min_year'] = min($decades[$decade_key]['min_year'], $year);
+				$decades[$decade_key]['max_year'] = max($decades[$decade_key]['max_year'], $year);
+				$decades[$decade_key]['terms'][] = $term;
+			}
+		}
+
+		krsort($decades);
+
+		echo '<ul
+			class="pm-decade__list"
+			data-wp-init="callbacks.init"
+			data-default-decade="' . esc_attr( array_key_first( $decades ) ) . '"
+		>';
+		foreach ($decades as $decade_key => $decade_data) :
+			$decade_label = $decade_data['min_year'] . ' - ' . $decade_data['max_year']; ?>
+
+			<li class="pm-decade__ist-item">
+				<button
+				class="pm-decades__button"
+				data-wp-class--active="context.activedecades.is<?php echo esc_attr($decade_key); ?>"
+				data-wp-on--click="actions.toggle"
+				data-decade="<?php echo $decade_key; ?>">
+					<?php echo esc_html($decade_label); ?>
+				</button>
+			</li>
+
+	<?php endforeach;
+		echo '</ul>';
+	endif;	
+?>
 
 <table class="graduates-table">
 	<thead>
@@ -166,8 +277,8 @@ function display_graduates_table() {
                 $current_url = strtok($_SERVER['REQUEST_URI'], '?');
                 $order_url = add_query_arg('year_order', $new_order, $current_url);
                 ?>
-                <a class="table-filter-year" href="<?php echo esc_url($order_url); ?>">
-                    Année <?php echo ($order === 'DESC') ? '↓' : '↑'; ?>
+                <a class="table-filter-year <?php echo 'pm-tfy pm-tfy--' . ( ($order === 'DESC') ? 'desc' : 'asc' ); ?>" href="<?php echo esc_url($order_url); ?>">
+                    Année 
                 </a>
 			</th>
 			<th>Littérature française</th>
@@ -177,8 +288,17 @@ function display_graduates_table() {
 	</thead>
 
 	  <tbody>
-        <?php foreach ($organized_data as $year => $prizes): ?>
-            <tr class="graduate-row">
+        <?php foreach ($organized_data as $year => $prizes):
+					$decade = floor(intval($year) / 10) * 10;	
+		?>
+            <tr
+			class="graduate-row"
+
+			<?php if (empty($keyword)) : ?>
+			data-wp-class--hidden="!context.activedecades.is<?php echo esc_attr($decade); ?>"
+			<?php endif; ?>
+
+			data-decade="<?php echo $decade ?>">
                 <td class="year-cell"><?php echo esc_html($year); ?></td>
                 
 				<?php foreach ( $prizes as $prize_name => $items ) {
@@ -195,6 +315,8 @@ function display_graduates_table() {
 </table>
 
 <?php endif; ?>
+
+</div>
 
 <?php
 

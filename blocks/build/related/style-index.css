@@ -1,0 +1,20 @@
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/related/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+.wp-block-pm-related {
+  border-top: 1px solid var(--wp--preset--color--contrast-light);
+  font-family: var(--wp--preset--font-family--highlight);
+  padding: 1rem 2rem;
+}
+.wp-block-pm-related ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

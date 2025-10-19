@@ -3,6 +3,10 @@
   \******************************************************************************************************************************************************************************************************************************************************/
 .pm-post .wp-block-post-content {
   font-style: italic;
+  text-justify: none;
+  padding-left: 8rem;
+  padding-right: 2rem;
+  font-size: 1rem !important;
 }
 .pm-post .has-text-align-left {
   text-align: left !important;
@@ -17,6 +21,9 @@
 .pm-post .btn--open::after {
   transform: rotate(180deg);
 }
+.pm-post .pm-year-btn {
+  line-height: 0.7;
+}
 .pm-post .pm-year-btn:hover {
   cursor: pointer;
 }
@@ -29,7 +36,7 @@
   content: "";
   display: block;
   aspect-ratio: 1;
-  width: 5rem;
+  width: 2rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

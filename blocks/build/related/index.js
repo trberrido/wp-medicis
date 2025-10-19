@@ -2,20 +2,20 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/meta-fetcher/block.json":
-/*!*************************************!*\
-  !*** ./src/meta-fetcher/block.json ***!
-  \*************************************/
+/***/ "./src/related/block.json":
+/*!********************************!*\
+  !*** ./src/related/block.json ***!
+  \********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/meta-fetcher","version":"0.1.0","title":"Meta fetcher","category":"widgets","icon":"clipboard","description":"Pick and display a meta","supports":{"typography":{"fontSize":true,"fontStyle":true}},"attributes":{"metaKey":{"type":"string","default":""}},"usesContext":["postId","postType"],"textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"pm/related","version":"0.1.0","title":"Related links","category":"widgets","icon":"admin-links","description":"Graduates: display other graduates","textdomain":"pm","editorStyle":"file:./index.css","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","usesContext":["postId","postType"]}');
 
 /***/ }),
 
-/***/ "./src/meta-fetcher/edit.js":
-/*!**********************************!*\
-  !*** ./src/meta-fetcher/edit.js ***!
-  \**********************************/
+/***/ "./src/related/edit.js":
+/*!*****************************!*\
+  !*** ./src/related/edit.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -30,7 +30,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/meta-fetcher/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/related/editor.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
@@ -114,10 +114,10 @@ function Edit({
 
 /***/ }),
 
-/***/ "./src/meta-fetcher/editor.scss":
-/*!**************************************!*\
-  !*** ./src/meta-fetcher/editor.scss ***!
-  \**************************************/
+/***/ "./src/related/editor.scss":
+/*!*********************************!*\
+  !*** ./src/related/editor.scss ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -126,18 +126,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/meta-fetcher/index.js":
-/*!***********************************!*\
-  !*** ./src/meta-fetcher/index.js ***!
-  \***********************************/
+/***/ "./src/related/index.js":
+/*!******************************!*\
+  !*** ./src/related/index.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/meta-fetcher/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/meta-fetcher/edit.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/meta-fetcher/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/related/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/related/edit.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/related/block.json");
 
 
 
@@ -151,10 +151,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/meta-fetcher/style.scss":
-/*!*************************************!*\
-  !*** ./src/meta-fetcher/style.scss ***!
-  \*************************************/
+/***/ "./src/related/style.scss":
+/*!********************************!*\
+  !*** ./src/related/style.scss ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -333,8 +333,8 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"meta-fetcher/index": 0,
-/******/ 			"meta-fetcher/style-index": 0
+/******/ 			"related/index": 0,
+/******/ 			"related/style-index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -384,7 +384,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["meta-fetcher/style-index"], () => (__webpack_require__("./src/meta-fetcher/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["related/style-index"], () => (__webpack_require__("./src/related/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -9,7 +9,8 @@
 	"description": "Pick and display a meta",
 	"supports": {
 		"typography": {
-			"fontSize": true
+			"fontSize": true,
+			"fontStyle": true
 		}
 	},
 	"attributes": {

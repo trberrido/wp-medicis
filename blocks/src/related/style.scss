@@ -1,0 +1,24 @@
+.wp-block-pm-related {
+	border-top: 1px solid var(--wp--preset--color--contrast-light);
+	font-family: var(--wp--preset--font-family--highlight);
+	padding: 1rem 2rem;
+	.graduate-footer__heading {
+
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+		row-gap: 0.5rem;
+		li {
+			a {
+
+			}
+		}
+	}
+}

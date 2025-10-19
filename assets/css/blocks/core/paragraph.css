@@ -141,3 +141,6 @@ p:not(.has-text-align-center, .has-text-align-left, .has-text-align-right){
 		padding: unset!important;
 	}
 }
+
+.--italic { font-style: italic }
+.--drapeau { text-justify: none }
