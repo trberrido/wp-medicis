@@ -23,9 +23,7 @@
 <!-- wp:group {"metadata":{"name":"Parchment content"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:template-part {"slug":"header","theme":"wp-medicis","area":"uncategorized","className":"parchment-vertical-line"} /-->
 
-<!-- wp:paragraph {"align":"center","fontSize":"476"} -->
-<p class="has-text-align-center has-476-font-size">La vie du prix</p>
-<!-- /wp:paragraph -->
+<!-- wp:pm/goto-parent /-->
 
 <!-- wp:image {"id":9784,"width":"72px","height":"auto","sizeSlug":"full","linkDestination":"none","align":"center"} -->
 <figure class="wp-block-image aligncenter size-full is-resized"><img src="/wp-content/themes/wp-medicis/assets/images/chat--mini.webp" alt="" class="wp-image-9784" style="width:72px;height:auto"/></figure>
@@ -34,6 +32,26 @@
 <!-- wp:post-title {"level":1,"fontSize":"750"} /-->
 
 <!-- wp:post-content {"fontSize":"md"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Next / Prev"},"className":"pm-np","layout":{"type":"constrained"}} -->
+<div class="wp-block-group pm-np"><!-- wp:group {"align":"wide","className":"pm-pn__inner","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group alignwide pm-pn__inner"><!-- wp:group {"className":"pm-np__prev","layout":{"type":"constrained"}} -->
+<div class="wp-block-group pm-np__prev"><!-- wp:paragraph -->
+<p>&lt; Précédent</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:post-navigation-link {"type":"previous","showTitle":true} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"pm-np__next","layout":{"type":"constrained","justifyContent":"right"}} -->
+<div class="wp-block-group pm-np__next"><!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+<p class="has-text-align-right" style="margin-top:0;margin-bottom:0">Suivant &gt;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:post-navigation-link {"showTitle":true} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
