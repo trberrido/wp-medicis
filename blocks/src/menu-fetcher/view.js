@@ -11,16 +11,19 @@
             toggle: () => {
 				const context = getContext();
                 context.isOpen = !context.isOpen;
+                const { ref } = getElement();
                 if (!context.cloneHappened){
-                    const secondary = document.querySelector('.secondary-mobile').cloneNode(true);
-                    const target = getElement().ref.closest('.wp-block-pm-menu-fetcher').querySelector('.pm-menus');
-                    secondary.querySelectorAll('li').forEach( li => {
+                    const secondary = document.querySelector('.secondary-mobile ul').cloneNode(true);
+                    const target = ref.closest('.wp-block-pm-menu-fetcher').querySelector('.pm-menus');
+                    secondary.querySelectorAll('li').forEach( ( li, index ) => {
                         li.classList.add('mobilehome-clone');
+                        if (index === 0){
+                          li.classList.add('pm-menu-item-first');
+                        }
                         target.appendChild(li);
                     });
                     context.cloneHappened = true;
                 }
-				const { ref } = getElement();
 
 				ref.closest('.wp-block-pm-menu-fetcher').classList.toggle('--open');
             },

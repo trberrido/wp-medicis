@@ -1,0 +1,1 @@
+{"version":3,"file":"excerpt-free/style-index.css","mappings":";;;AACE;EACE;AAAJ,C","sources":["webpack://blocks/./src/excerpt-free/style.scss"],"sourcesContent":[".wp-block-pm-excerpt-free {\n  p {\n    text-align: center!important;\n  }\n}"],"names":[],"sourceRoot":""}

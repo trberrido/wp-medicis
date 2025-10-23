@@ -1,0 +1,17 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/prize-description-fetcher/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-pm-prize-description-fetcher {
+  padding-top: var(--wp--preset--spacing--40);
+  padding-bottom: var(--wp--preset--spacing--40);
+  text-align: center !important;
+  font-size: var(--wp--preset--font-size--476) !important;
+  text-transform: uppercase;
+  font-family: var(--wp--preset--font-family--highlight);
+  color: var(--wp--preset--color--contrast);
+  letter-spacing: 0.313em;
+}
+.wp-block-pm-prize-description-fetcher p {
+  margin: 0 auto;
+  text-align: center !important;
+}

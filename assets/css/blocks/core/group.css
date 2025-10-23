@@ -367,7 +367,7 @@
 
 .pm-icon-augen {
 	margin: auto;
-	width: 5.625rem;
+	width: 4.625rem;
 	aspect-ratio: 1;
 	background-color: currentColor;
 	mask-size: contain;
@@ -399,3 +399,9 @@
 
 .pm-np__prev {}
 .pm-np__next {}
+
+.pm-post .info-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}

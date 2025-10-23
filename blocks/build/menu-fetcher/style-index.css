@@ -86,6 +86,11 @@
   }
 }
 
+@media (max-width: 60rem) {
+  .pm-menu-item-first {
+    margin-top: 2.5rem;
+  }
+}
 .wp-block-pm-menu-fetcher.menu__secondary:not(.secondary-mobile) {
   position: fixed;
   bottom: -0.75rem;

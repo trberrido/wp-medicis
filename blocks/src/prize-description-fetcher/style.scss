@@ -1,0 +1,14 @@
+.wp-block-pm-prize-description-fetcher {
+	padding-top: var(--wp--preset--spacing--40);
+  padding-bottom: var(--wp--preset--spacing--40);
+  text-align: center !important;
+  font-size: var(--wp--preset--font-size--476) !important;
+  text-transform: uppercase;
+  font-family: var(--wp--preset--font-family--highlight);
+  color: var(--wp--preset--color--contrast);
+  letter-spacing: 0.313em;
+  p {
+	margin: 0 auto;
+	text-align: center !important;
+  }
+}

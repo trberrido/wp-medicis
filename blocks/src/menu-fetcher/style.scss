@@ -98,6 +98,12 @@
 
 } 
 
+@media (max-width: 60rem) {
+	.pm-menu-item-first {
+		margin-top: 2.5rem;
+	}
+}
+
 .wp-block-pm-menu-fetcher.menu__secondary:not(.secondary-mobile) {
 	position: fixed;
 	bottom: -0.75rem;
@@ -116,6 +122,7 @@
 		border-radius: 1.5rem;
 		background-color:rgba(0,0,0,0.8);
 		li.menu-item {
+			
 			a {
 				text-decoration: none;
 				color: white;

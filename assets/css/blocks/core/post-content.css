@@ -3,6 +3,11 @@
 	z-index: 1;
 }
 
+.pm-post .entry-content.wp-block-post-content p {
+	text-align: left;
+	font-style: italic;
+}
+
 @media (max-width: 60rem) {
 
 	.entry-content.wp-block-post-content {

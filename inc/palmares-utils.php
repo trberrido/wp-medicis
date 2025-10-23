@@ -132,8 +132,9 @@ function display_graduates_table() {
 			$content_match = stripos($graduate->post_content, $keyword) !== false;
 			$author_match = stripos($item['author'], $keyword) !== false;
 			$publisher_match = stripos($item['editor'], $keyword) !== false;
+			$year_match = stripos($item['year'], $keyword) !== false;
 			
-			if (!$title_match && !$content_match && !$author_match && !$publisher_match) {
+			if (!$title_match && !$content_match && !$author_match && !$publisher_match && !$year_match) {
 				continue; // Skip this graduate if keyword doesn't match
 			}
 		}
