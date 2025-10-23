@@ -13,7 +13,7 @@
                 context.isOpen = !context.isOpen;
                 if (!context.cloneHappened){
                     const secondary = document.querySelector('.secondary-mobile').cloneNode(true);
-                    const target = document.querySelector('#menu-menu-1');
+                    const target = getElement().ref.closest('.wp-block-pm-menu-fetcher').querySelector('.pm-menus');
                     secondary.querySelectorAll('li').forEach( li => {
                         li.classList.add('mobilehome-clone');
                         target.appendChild(li);

@@ -16,7 +16,7 @@
 		'container'			=> false,
 		'echo'				=> false,
 		'item_spacing'		=> 'discard',
-		'menu_class'		=> ($attributes['hasMobileBurger'] ? 'pm-desktop-only menu' : 'menu')
+		'menu_class'		=> 'pm-menus ' . ($attributes['hasMobileBurger'] ? 'pm-desktop-only menu' : 'menu')
 	);
 	$menu = wp_nav_menu( $args );
 	if ( $menu === false ) {

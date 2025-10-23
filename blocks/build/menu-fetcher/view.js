@@ -1,1 +1,94 @@
-import{getContext as e,getElement as o,store as t}from"@wordpress/interactivity";const{state:n}=t("pm/menu-fetcher",{state:{get isOpen(){return e().isOpen||!1}},actions:{toggle:()=>{const t=e();if(t.isOpen=!t.isOpen,!t.cloneHappened){const e=document.querySelector(".secondary-mobile").cloneNode(!0),o=document.querySelector("#menu-menu-1");e.querySelectorAll("li").forEach(e=>{e.classList.add("mobilehome-clone"),o.appendChild(e)}),t.cloneHappened=!0}const{ref:n}=o();n.closest(".wp-block-pm-menu-fetcher").classList.toggle("--open")}}});
+import * as __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__ from "@wordpress/interactivity";
+/******/ var __webpack_modules__ = ({
+
+/***/ "@wordpress/interactivity":
+/*!*******************************************!*\
+  !*** external "@wordpress/interactivity" ***!
+  \*******************************************/
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__;
+
+/***/ })
+
+/******/ });
+/************************************************************************/
+/******/ // The module cache
+/******/ var __webpack_module_cache__ = {};
+/******/ 
+/******/ // The require function
+/******/ function __webpack_require__(moduleId) {
+/******/ 	// Check if module is in cache
+/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	if (cachedModule !== undefined) {
+/******/ 		return cachedModule.exports;
+/******/ 	}
+/******/ 	// Create a new module (and put it into the cache)
+/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
+/******/ 		exports: {}
+/******/ 	};
+/******/ 
+/******/ 	// Execute the module function
+/******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 
+/******/ 	// Return the exports of the module
+/******/ 	return module.exports;
+/******/ }
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/make namespace object */
+/******/ (() => {
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ })();
+/******/ 
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!**********************************!*\
+  !*** ./src/menu-fetcher/view.js ***!
+  \**********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
+
+const {
+  state
+} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('pm/menu-fetcher', {
+  state: {
+    get isOpen() {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      return context.isOpen || false;
+    }
+  },
+  actions: {
+    toggle: () => {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      context.isOpen = !context.isOpen;
+      if (!context.cloneHappened) {
+        const secondary = document.querySelector('.secondary-mobile').cloneNode(true);
+        const target = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)().ref.closest('.wp-block-pm-menu-fetcher').querySelector('.pm-menus');
+        secondary.querySelectorAll('li').forEach(li => {
+          li.classList.add('mobilehome-clone');
+          target.appendChild(li);
+        });
+        context.cloneHappened = true;
+      }
+      const {
+        ref
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+      ref.closest('.wp-block-pm-menu-fetcher').classList.toggle('--open');
+    }
+  }
+});
+})();
+
+
+//# sourceMappingURL=view.js.map
