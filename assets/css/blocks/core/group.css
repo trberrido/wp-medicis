@@ -430,3 +430,9 @@ left: 51rem;
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+@media (max-width: 60rem) {
+.pm-home-footer {
+		margin-top: 2rem!important;
+	}
+}
