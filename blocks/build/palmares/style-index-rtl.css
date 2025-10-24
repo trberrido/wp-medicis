@@ -70,8 +70,7 @@
 }
 @media (max-width: 60rem) {
   .pm-decade__list {
-    width: 100%;
-    margin-right: auto;
+    display: none !important;
   }
 }
 .pm-decade__list {
@@ -157,8 +156,10 @@ p.graduate-no-result {
     display: none;
   }
 }
-.graduates-table tbody tr.graduate-row.hidden {
-  display: none !important;
+@media (min-width: 60rem) {
+  .graduates-table tbody tr.graduate-row.hidden {
+    display: none !important;
+  }
 }
 .graduates-table tbody tr.graduate-row .prize-items {
   padding: 0 0.25rem;

@@ -61,8 +61,7 @@
 	margin-left: -5rem;
 
 	@media (max-width: 60rem) {
-		width: 100%;
-  		margin-left: auto;
+		display: none!important;
 	}
 
 	padding: 0;
@@ -157,9 +156,11 @@ p.graduate-no-result {
 	tbody {
 
 		tr.graduate-row {
-			&.hidden { display: none !important; }
-
-			td {}
+			&.hidden { 
+				@media (min-width: 60rem){
+					display: none !important;
+				}
+			}
 
 			.prize-items {
 				padding: 0 .25rem;
