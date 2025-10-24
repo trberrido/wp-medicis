@@ -16,10 +16,23 @@
 		font-weight: 800;
 		width: 8rem;
 	}
-	.graduate-search-input::placeholder {
+	.graduate-search-input:focus {
+		outline: none;
+		border-color: var(--wp--preset--color--primary-dark);
+	}
+	.graduate-search-input::-moz-placeholder,
+.graduate-search-input::-ms-placeholder,
+.graduate-search-input::placeholder {
 		opacity: 1;
 		font-weight: 800;
+		color: var(--wp--preset--color--primary);
 	}
+	.graduate-search-input::-webkit-input-placeholder {
+		opacity: 1;
+		font-weight: 800;
+		color: var(--wp--preset--color--primary);	
+	}
+
 	.search-button {
 		font-size: 0;
 		text-transform: uppercase;
@@ -60,11 +73,13 @@
 	list-style-type: none;
 
 	.pm-decades__button {
+
 		font-family: var(--wp--preset--font-family--highlight);
 		border: none;
-		font-size: 1.05em;
+		font-size: .9em;
 		background-color: transparent;
 		&.active {
+			text-underline-offset: .25rem;
 			text-decoration: underline;
 			color: var(--wp--preset--color--primary);
 		}
@@ -124,14 +139,14 @@ p.graduate-no-result {
 	}
 
 	thead {
-		font-size: .75em;
+		font-size: .65em;
 		th {
 
 			padding-bottom: 2rem;
 			text-align: left;
 			font-family: var(--wp--preset--font-family--highlight);
 			text-transform: uppercase;
-
+			letter-spacing: .075rem;
 			@media (max-width: 60rem) {
 		
 				display: none;
@@ -218,7 +233,7 @@ p.graduate-no-result {
 							&::backdrop {
 								background-color: rgba(0, 0, 0, 0.5);
 							}
-							img { display: block }
+							img { display: block; width: 20rem;}
 							button {
 								&:hover {
 									cursor: pointer;
@@ -242,6 +257,7 @@ p.graduate-no-result {
 						
 						&.graduate-ico--open {
 							.graduate-img {
+							
 								display: block;
 								box-shadow: 0px 0px 0px 1000rem rgba(0, 0, 0, 0.25);
 							}	

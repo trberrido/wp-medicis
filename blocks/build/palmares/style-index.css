@@ -21,13 +21,26 @@
   font-weight: 800;
   width: 8rem;
 }
+.graduate-search-form .graduate-search-input:focus {
+  outline: none;
+  border-color: var(--wp--preset--color--primary-dark);
+}
 .graduate-search-form .graduate-search-input::-moz-placeholder {
   opacity: 1;
   font-weight: 800;
+  color: var(--wp--preset--color--primary);
 }
+.graduate-search-form .graduate-search-input::-moz-placeholder,
+.graduate-search-form .graduate-search-input::-ms-placeholder,
 .graduate-search-form .graduate-search-input::placeholder {
   opacity: 1;
   font-weight: 800;
+  color: var(--wp--preset--color--primary);
+}
+.graduate-search-form .graduate-search-input::-webkit-input-placeholder {
+  opacity: 1;
+  font-weight: 800;
+  color: var(--wp--preset--color--primary);
 }
 .graduate-search-form .search-button {
   font-size: 0;
@@ -72,10 +85,11 @@
 .pm-decade__list .pm-decades__button {
   font-family: var(--wp--preset--font-family--highlight);
   border: none;
-  font-size: 1.05em;
+  font-size: 0.9em;
   background-color: transparent;
 }
 .pm-decade__list .pm-decades__button.active {
+  text-underline-offset: 0.25rem;
   text-decoration: underline;
   color: var(--wp--preset--color--primary);
 }
@@ -129,13 +143,14 @@ p.graduate-no-result {
   }
 }
 .graduates-table thead {
-  font-size: 0.75em;
+  font-size: 0.65em;
 }
 .graduates-table thead th {
   padding-bottom: 2rem;
   text-align: left;
   font-family: var(--wp--preset--font-family--highlight);
   text-transform: uppercase;
+  letter-spacing: 0.075rem;
 }
 @media (max-width: 60rem) {
   .graduates-table thead th {
@@ -217,6 +232,7 @@ p.graduate-no-result {
 }
 .graduates-table tbody tr.graduate-row td.prize-cell .graduate-infos .graduate-ico dialog img {
   display: block;
+  width: 20rem;
 }
 .graduates-table tbody tr.graduate-row td.prize-cell .graduate-infos .graduate-ico dialog button:hover {
   cursor: pointer;

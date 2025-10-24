@@ -140,7 +140,7 @@ function display_graduates_table() {
 		}
 
         // Thumbnail URL
-        $item['thumbnail'] = get_the_post_thumbnail_url($graduate->ID, 'medium');
+        $item['thumbnail'] = get_the_post_thumbnail_url($graduate->ID, 'large');
         if (!$item['thumbnail']) {
             $item['thumbnail'] = '';
         }
