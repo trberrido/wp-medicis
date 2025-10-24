@@ -20,6 +20,9 @@
   display: none;
 }
 @media (max-width: 60rem) {
+  .wp-block-pm-perecs p {
+    text-align: left !important;
+  }
   .wp-block-pm-perecs .perec-column__content {
     display: none;
   }
@@ -33,7 +36,7 @@
   }
 }
 .wp-block-pm-perecs .perec-column__index {
-  width: 10rem;
+  width: 12rem;
 }
 @media (max-width: 60rem) {
   .wp-block-pm-perecs .perec-column__index {
@@ -88,9 +91,9 @@
   background-repeat: no-repeat;
   background-size: contain;
   aspect-ratio: 817/1209;
-  width: 2.5rem;
+  width: 3.5rem;
   margin: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

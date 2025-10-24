@@ -13,7 +13,7 @@
 	width: auto!important;
 }
 
-.pm-popup__target .wp-block-gallery.has-nested-images figcaption {
+.pm-popup__target .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	flex-grow: 0!important;
 	flex-basis: auto!important;
 	position: static!important;

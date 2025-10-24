@@ -275,6 +275,11 @@
 			"name": "pages--no-gif",
 			"postTypes": [ "page" ],
 			"title": "Page sans en-tête animé"
+		},
+		{
+			"name": "pages--history",
+			"postTypes": [ "page" ],
+			"title": "Histoire du prix"
 		}
 	],
 	"templateParts": [
