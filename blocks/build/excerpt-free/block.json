@@ -8,8 +8,7 @@
   "icon": "ellipsis",
   "description": "Display the first caracters of a post",
   "usesContext": [
-    "postId",
-    "postType"
+    "postId"
   ],
   "textdomain": "pm",
   "editorStyle": "file:./index.css",

@@ -1,29 +1,23 @@
 <?php
+$post_id=$block->context['postId']??get_the_ID();
+if(!$post_id)return;
 
-// Get the post ID from context or current post
-$post_id = $block->context['postId'];
+$post=get_post($post_id);
+$content=$post->post_content??'';
 
-if (!$post_id) {
-    return;
+// keep formatting, remove shortcodes and block comments
+$content=do_blocks($content);
+$content=wpautop($content);
+
+// use wp_html_excerpt to preserve tag integrity
+$excerpt=wp_html_excerpt($content,300);
+if(strlen(strip_tags($content))>300){
+	$excerpt.='...';
 }
 
-// Get the raw post content
-$post = get_post($post_id);
-$raw_content = $post->post_content ?? '';
-
-// Get first 45 characters without filtering HTML
-$excerpt = substr($raw_content, 0, 300);
-
-
-// Add ellipsis if content was truncated
-if (strlen($raw_content) > 45) {
-    $excerpt .= '...';
-}
-
-// Get block wrapper attributes
-$wrapper_attributes = get_block_wrapper_attributes();
+$wrapper_attributes=get_block_wrapper_attributes();
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>
-    <?php echo $excerpt; ?>
+	<?php echo $excerpt; ?>
 </div>
