@@ -90,16 +90,3 @@
 .wp-block-pm-year-filter li {
   text-align: center;
 }
-
-.pm-publisher a {
-  text-decoration: none;
-  pointer-events: none;
-}
-
-.pm-publisher a::before {
-  content: "/";
-  margin-right: 1rem;
-  margin-left: 0.25rem;
-  display: inline-block;
-  margin-top: 1rem;
-}

@@ -55,7 +55,7 @@
 	echo '<ul>';
 	foreach ( $links as $link ) {
 		echo sprintf(
-			'<li><a href="%s" target="_blank" rel="noopener">%s</a></li>',
+			'<li><a href="%s" rel="noopener">%s</a></li>',
 			esc_url( $link['url'] ),
 			esc_html( $link['title'] )
 		);

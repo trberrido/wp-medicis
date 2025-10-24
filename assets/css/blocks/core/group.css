@@ -436,3 +436,22 @@ left: 51rem;
 		margin-top: 2rem!important;
 	}
 }
+
+.info-column p, .info-column h2 {
+	text-align: left!important;
+}
+
+.pm-publisher a {
+	text-decoration: none;
+	pointer-events: none;
+	display: block;
+};
+
+.pm-publisher a::before {
+	content: '/';
+	width: 1rem;
+	margin-left: 1rem;
+	margin-right: .25rem;
+	display: block;
+	margin-top:1rem;
+}

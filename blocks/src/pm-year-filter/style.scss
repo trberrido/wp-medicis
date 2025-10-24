@@ -100,17 +100,3 @@
 		text-align: center;
 	}
 }
-
-
-.pm-publisher a {
-	text-decoration: none;
-	pointer-events: none
-};
-
-.pm-publisher a::before {
-	content: '/';
-	margin-left: 1rem;
-	margin-right: .25rem;
-	display: inline-block;
-	margin-top:1rem;
-}
