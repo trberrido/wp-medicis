@@ -1,6 +1,25 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'excerpt-free' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'pm/excerpt-free',
+		'version' => '0.1.0',
+		'title' => 'Excerpt but Free',
+		'category' => 'widgets',
+		'icon' => 'ellipsis',
+		'description' => 'Display the first caracters of a post',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'pm',
+		'editorStyle' => 'file:./index.css',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'goto-parent' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -153,6 +172,25 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php',
 		'viewScriptModule' => 'file:./view.js'
+	),
+	'prize-description-fetcher' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'pm/prize-description-fetcher',
+		'version' => '0.1.0',
+		'title' => 'Prize description fetcher',
+		'category' => 'widgets',
+		'icon' => 'welcome-learn-more',
+		'description' => 'Display the description of the current graduate\'s prize',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'pm',
+		'editorStyle' => 'file:./index.css',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
 	),
 	'related' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
