@@ -1,5 +1,10 @@
 <?php defined('ABSPATH') or die();
 
+function disable_wp_lazy_load() {
+    add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+}
+add_action( 'after_setup_theme', 'disable_wp_lazy_load' );
+
 add_filter( 'image_editor_output_format', 'pm__filter_image_editor_output_format' );
 function pm__filter_image_editor_output_format( array $formats ): array {
 	$formats['image/jpeg'] = 'image/avif';
